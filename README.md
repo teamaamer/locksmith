@@ -8,6 +8,7 @@ privacy.html        Privacy Policy + SMS terms (needed for GoHighLevel A2P / SMS
 css/styles.css      All styles (brand colors are CSS variables at the top)
 js/main.js          Menu, animations, form validation + submission  ← CONFIG is at the top
 assets/             Logo, icons, share image (og-image.jpg), self-hosted font
+assets/images/locksmith/  Photographic WebP assets (hero-keys, automotive, residential, commercial, emergency, keys-leather; -520/-900/-1000 are responsive sizes)
 robots.txt, sitemap.xml, site.webmanifest
 ```
 

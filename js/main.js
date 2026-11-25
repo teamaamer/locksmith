@@ -64,14 +64,19 @@ const CONFIG = {
     reveals.forEach((el) => el.classList.add("in"));
   }
 
-  /* ---------- Card spotlight follows the cursor ---------- */
-  $$(".card").forEach((card) => {
-    card.addEventListener("pointermove", (e) => {
-      const r = card.getBoundingClientRect();
-      card.style.setProperty("--mx", e.clientX - r.left + "px");
-      card.style.setProperty("--my", e.clientY - r.top + "px");
-    });
-  });
+  /* ---------- Hero key parallax (desktop, motion-safe) ---------- */
+  const heroBg = $("#heroBg");
+  if (heroBg && !reduceMotion && window.matchMedia("(min-width: 981px) and (hover: hover)").matches) {
+    let ticking = false;
+    const heroEl = heroBg.closest(".hero");
+    const update = () => {
+      ticking = false;
+      const sc = window.scrollY;
+      if (sc > heroEl.offsetHeight) return;
+      heroBg.style.setProperty("--py", Math.round(sc * 0.08) + "px");
+    };
+    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  }
 
   /* ---------- FAQ: one open at a time ---------- */
   const faqs = $$(".faq details");

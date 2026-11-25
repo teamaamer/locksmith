@@ -179,29 +179,6 @@
     <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 21.5 12C19 16.65 12 21 12 21z"/></symbol>
     <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.7z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></symbol>
 
-    <!-- Car key fob illustration -->
-    <symbol id="fob" viewBox="0 0 200 360">
-      <defs>
-        <linearGradient id="fobBody" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a312b"/><stop offset=".45" stop-color="#1b1613"/><stop offset="1" stop-color="#0c0908"/></linearGradient>
-        <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8d8d8d"/><stop offset=".35" stop-color="#f4f4f4"/><stop offset=".6" stop-color="#bdbdbd"/><stop offset="1" stop-color="#7a7a7a"/></linearGradient>
-        <linearGradient id="btn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a231f"/><stop offset="1" stop-color="#14100d"/></linearGradient>
-      </defs>
-      <circle cx="100" cy="16" r="12" fill="none" stroke="#c9c9c9" stroke-width="5"/>
-      <rect x="32" y="22" width="136" height="196" rx="60" fill="url(#fobBody)" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
-      <path d="M52 70c4-24 22-38 48-38" stroke="rgba(255,255,255,.18)" stroke-width="6" stroke-linecap="round" fill="none"/>
-      <circle cx="100" cy="78" r="21" fill="url(#btn)" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
-      <rect x="92" y="78" width="16" height="12" rx="2" fill="none" stroke="#efe3d6" stroke-width="2.4"/>
-      <path d="M95 78v-4a5 5 0 0 1 10 0v4" fill="none" stroke="#efe3d6" stroke-width="2.4"/>
-      <circle cx="100" cy="128" r="21" fill="url(#btn)" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
-      <rect x="92" y="128" width="16" height="12" rx="2" fill="none" stroke="#efe3d6" stroke-width="2.4"/>
-      <path d="M95 128v-4a5 5 0 0 1 9.6-2" fill="none" stroke="#efe3d6" stroke-width="2.4"/>
-      <rect x="78" y="164" width="44" height="26" rx="13" fill="url(#btn)" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
-      <circle cx="100" cy="177" r="5" fill="#ff4d2e"/>
-      <rect x="80" y="214" width="40" height="26" rx="5" fill="#15110e" stroke="rgba(255,255,255,.1)"/>
-      <path d="M86 240h28v74l-8 9v8l-6 9-6-7v-30l-8-7z" fill="url(#metal)"/>
-      <path d="M97 248v58" stroke="rgba(0,0,0,.28)" stroke-width="3"/>
-      <circle cx="146" cy="62" r="3" fill="#ff8a2b"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-    </symbol>
   </defs>
 </svg>
 
@@ -260,21 +237,29 @@
 
 <!-- ===== HERO + LEAD FORM ===== -->
 <section class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-bg" id="heroBg" src="assets/images/locksmith/hero-keys.webp"
+         srcset="assets/images/locksmith/hero-keys-1000.webp 1000w, assets/images/locksmith/hero-keys.webp 1672w"
+         sizes="(max-width: 980px) 140vw, 130vw" width="1672" height="941" alt="" fetchpriority="high" decoding="async">
+  </div>
   <div class="container hero-grid">
     <div class="hero-left">
       <div class="hero-intro">
         <h1 class="reveal" style="--d:.08s">
           <span class="h1-kicker">Springfield, MA · Available 24/7</span>
-          <span class="h1-main">Mobile locksmith service</span>
+          <span class="h1-main">24/7 Mobile Locksmith Service <span class="accent">You Can Count On</span></span>
         </h1>
         <p class="hero-copy reveal" style="--d:.16s">Locked out, need a spare car key, or changing your locks? Locksmith Express MK comes to your home, business, or vehicle in Springfield and nearby Western Massachusetts towns.</p>
         <div class="hero-actions reveal" style="--d:.24s">
-          <a class="btn btn-primary btn-lg" href="tel:+14134331135"><span class="ring"></span><svg><use href="#i-phone"/></svg>Call (413) 433-1135</a>
+          <a class="btn btn-primary btn-lg" href="tel:+14134331135"><svg><use href="#i-phone"/></svg>Call (413) 433-1135</a>
           <a class="btn btn-ghost btn-lg" href="#services">Our Services <svg><use href="#i-arrow"/></svg></a>
         </div>
+        <ul class="hero-points reveal" style="--d:.3s">
+          <li><svg><use href="#i-zap"/></svg><span>24/7<br>Emergency</span></li>
+          <li><svg><use href="#i-van"/></svg><span>We come<br>to you</span></li>
+          <li><svg><use href="#i-shield"/></svg><span>No-damage<br>entry</span></li>
+        </ul>
       </div>
-      <img class="hero-photo" src="assets/deadbolt-installation.webp" width="1280" height="656"
-           alt="Illustration of a locksmith fitting a deadbolt to a front door" fetchpriority="high">
     </div>
 
     <!-- Lead form (connect to GoHighLevel in js/main.js → CONFIG.WEBHOOK_URL) -->
@@ -368,71 +353,69 @@
 
     <div class="bento">
       <article class="card card-auto reveal" id="automotive">
-        <span class="tag">Most requested</span>
-        <svg class="fob" viewBox="0 0 200 360" aria-hidden="true"><use href="#fob"/></svg>
-        <div class="card-icon"><svg><use href="#i-car"/></svg></div>
-        <h3 class="display">Automotive locksmith</h3>
-        <p>Locked out, lost your keys, or your fob stopped working? We come to your car — roadside, driveway or parking lot — with the tools to open it and to cut &amp; program a new key on the spot.</p>
-        <ul class="ticks">
-          <li><svg><use href="#i-check-circle"/></svg>Car lockouts — no damage</li>
-          <li><svg><use href="#i-check-circle"/></svg>Car key replacement</li>
-          <li><svg><use href="#i-check-circle"/></svg>Lost &amp; spare car keys</li>
-          <li><svg><use href="#i-check-circle"/></svg>Key fob &amp; remote programming</li>
-          <li><svg><use href="#i-check-circle"/></svg>Transponder (chip) keys</li>
-          <li><svg><use href="#i-check-circle"/></svg>Push-to-start smart keys</li>
-          <li><svg><use href="#i-check-circle"/></svg>Ignition repair</li>
-          <li><svg><use href="#i-check-circle"/></svg>Broken key extraction</li>
-        </ul>
-        <div class="auto-cta">
-          <a class="btn btn-primary" href="tel:+14134331135"><svg><use href="#i-phone"/></svg>Call for a car locksmith</a>
-          <a class="btn btn-ghost" href="#quote">Request a quote</a>
+        <div class="card-media"><img src="assets/images/locksmith/automotive-900.webp" srcset="assets/images/locksmith/automotive-520.webp 520w, assets/images/locksmith/automotive-900.webp 900w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 600px" width="900" height="675" alt="Car key fob beside a push-to-start ignition button" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="card-icon"><svg><use href="#i-car"/></svg></div>
+          <h3 class="display">Automotive locksmith</h3>
+          <p>Locked out, lost your keys, or your fob stopped working? We come to your car — roadside, driveway or parking lot — with the tools to open it and to cut &amp; program a new key on the spot.</p>
+          <ul class="ticks">
+            <li><svg><use href="#i-check-circle"/></svg>Car lockouts — no damage</li><li><svg><use href="#i-check-circle"/></svg>Car key replacement</li><li><svg><use href="#i-check-circle"/></svg>Lost &amp; spare car keys</li><li><svg><use href="#i-check-circle"/></svg>Key fob &amp; remote programming</li><li><svg><use href="#i-check-circle"/></svg>Transponder (chip) keys</li><li><svg><use href="#i-check-circle"/></svg>Push-to-start smart keys</li><li><svg><use href="#i-check-circle"/></svg>Ignition repair</li><li><svg><use href="#i-check-circle"/></svg>Broken key extraction</li>
+          </ul>
+          <div class="auto-cta">
+            <a class="btn btn-primary" href="tel:+14134331135"><svg><use href="#i-phone"/></svg>Call for a car locksmith</a>
+            <a class="btn btn-ghost" href="#quote">Request a quote</a>
+          </div>
         </div>
       </article>
 
       <article class="card card-home reveal" id="residential" style="--d:.08s">
-        <div class="card-icon"><svg><use href="#i-home"/></svg></div>
-        <h3 class="display">Residential</h3>
-        <p>Home lockouts, rekeying and lock upgrades for stronger everyday security.</p>
-        <ul class="ticks">
-          <li><svg><use href="#i-check-circle"/></svg>House lockout service</li>
-          <li><svg><use href="#i-check-circle"/></svg>Lock rekeying</li>
-          <li><svg><use href="#i-check-circle"/></svg>Lock change &amp; replacement</li>
-          <li><svg><use href="#i-check-circle"/></svg>Deadbolt &amp; keypad installation</li>
-        </ul>
+        <div class="card-media"><img src="assets/images/locksmith/residential-900.webp" srcset="assets/images/locksmith/residential-520.webp 520w, assets/images/locksmith/residential-900.webp 900w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 600px" width="900" height="675" alt="Brass key in a premium deadbolt on a dark wood door" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="card-icon"><svg><use href="#i-home"/></svg></div>
+          <h3 class="display">Residential</h3>
+          <p>Home lockouts, rekeying and lock upgrades for stronger everyday security.</p>
+          <ul class="ticks">
+            <li><svg><use href="#i-check-circle"/></svg>House lockout service</li><li><svg><use href="#i-check-circle"/></svg>Lock rekeying</li><li><svg><use href="#i-check-circle"/></svg>Lock change &amp; replacement</li><li><svg><use href="#i-check-circle"/></svg>Deadbolt &amp; keypad installation</li>
+          </ul>
+          <a class="more" href="#quote">Request a quote <svg><use href="#i-arrow"/></svg></a>
+        </div>
       </article>
 
       <article class="card card-biz reveal" id="commercial" style="--d:.12s">
-        <div class="card-icon"><svg><use href="#i-building"/></svg></div>
-        <h3 class="display">Commercial</h3>
-        <p>Keep your business secure and your team moving.</p>
-        <ul class="ticks">
-          <li><svg><use href="#i-check-circle"/></svg>Office &amp; storefront lockouts</li>
-          <li><svg><use href="#i-check-circle"/></svg>Master key systems</li>
-          <li><svg><use href="#i-check-circle"/></svg>High-security locks</li>
-          <li><svg><use href="#i-check-circle"/></svg>Lock repair, rekey &amp; keypad entry</li>
-        </ul>
+        <div class="card-media"><img src="assets/images/locksmith/commercial-900.webp" srcset="assets/images/locksmith/commercial-520.webp 520w, assets/images/locksmith/commercial-900.webp 900w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 600px" width="900" height="675" alt="Electronic access-control keypad on an office door" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <div class="card-icon"><svg><use href="#i-building"/></svg></div>
+          <h3 class="display">Commercial</h3>
+          <p>Keep your business secure and your team moving.</p>
+          <ul class="ticks">
+            <li><svg><use href="#i-check-circle"/></svg>Office &amp; storefront lockouts</li><li><svg><use href="#i-check-circle"/></svg>Master key systems</li><li><svg><use href="#i-check-circle"/></svg>High-security locks</li><li><svg><use href="#i-check-circle"/></svg>Lock repair, rekey &amp; keypad entry</li>
+          </ul>
+          <a class="more" href="#quote">Request a quote <svg><use href="#i-arrow"/></svg></a>
+        </div>
       </article>
 
       <article class="card card-safe reveal" id="safe">
         <div class="card-icon"><svg><use href="#i-safe"/></svg></div>
-        <h3 class="display">Safe locksmith</h3>
-        <p>Forgot the combination or the lock failed? We open, repair and reset safes.</p>
-        <ul class="ticks">
-          <li><svg><use href="#i-check-circle"/></svg>Safe opening</li>
-          <li><svg><use href="#i-check-circle"/></svg>Combination changes</li>
-          <li><svg><use href="#i-check-circle"/></svg>Safe lock repair &amp; replacement</li>
-        </ul>
-      </article>
-
-      <a class="card card-emergency reveal" href="tel:+14134331135" style="--d:.08s">
-        <svg class="lock-bg" aria-hidden="true"><use href="#i-lock"/></svg>
-        <div>
-          <h3 class="display">Emergency?<br>Skip the form.</h3>
-          <p>Locked out right now? Call and a technician heads your way — 24 hours a day.</p>
+        <div class="safe-text">
+          <h3 class="display">Safe locksmith</h3>
+          <p>Forgot the combination or the lock failed? We open, repair and reset safes.</p>
         </div>
-        <span class="big-phone display"><svg><use href="#i-phone"/></svg>(413) 433-1135</span>
-      </a>
+        <ul class="ticks">
+          <li><svg><use href="#i-check-circle"/></svg>Safe opening</li><li><svg><use href="#i-check-circle"/></svg>Combination changes</li><li><svg><use href="#i-check-circle"/></svg>Safe lock repair &amp; replacement</li>
+        </ul>
+        <a class="btn btn-ghost" href="#quote">Request a quote <svg><use href="#i-arrow"/></svg></a>
+      </article>
     </div>
+
+    <!-- Cinematic emergency banner -->
+    <a class="emergency reveal" href="tel:+14134331135" aria-label="Emergency? Call (413) 433-1135">
+      <img class="emergency-img" src="assets/images/locksmith/emergency-900.webp" srcset="assets/images/locksmith/emergency-900.webp 900w, assets/images/locksmith/emergency.webp 1672w" sizes="(max-width: 980px) 100vw, 1240px" width="1672" height="941" alt="" loading="lazy" decoding="async">
+      <div class="emergency-copy">
+        <h2 class="display">Emergency?<br><span class="accent">Skip the form.</span></h2>
+        <p>Locked out right now? Call and a technician heads your way — 24 hours a day.</p>
+      </div>
+      <span class="emergency-call"><svg><use href="#i-phone"/></svg>(413) 433-1135</span>
+    </a>
   </div>
 </section>
 
@@ -441,7 +424,7 @@
   <div class="container">
     <div class="section-head center reveal">
       <span class="eyebrow">How it works</span>
-      <h2 class="h2 display">Back in.<br><span class="grad-text">3 simple steps.</span></h2>
+      <h2 class="h2 display">Back in.<br><span class="accent">3 simple steps.</span></h2>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -463,35 +446,15 @@
   </div>
 </section>
 
-<!-- ===== Emergency band ===== -->
-<section class="band">
-  <svg class="key-art" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-key"/></svg>
-  <div class="container">
-    <div class="reveal">
-      <h2 class="display">Stuck outside<br>your car right now?</h2>
-      <p>Don't call a tow truck. We come to you with the tools to open your car — and to cut and program a new key on the spot.</p>
-    </div>
-    <div class="band-call reveal" style="--d:.1s">
-      <span class="label">24/7 Emergency line</span>
-      <a class="num display" href="tel:+14134331135">(413) 433-1135</a>
-      <a class="btn btn-dark btn-lg" href="tel:+14134331135"><svg><use href="#i-phone"/></svg>Tap to call now</a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== Spare key ===== -->
 <section class="section">
   <div class="container spare">
-    <div class="spare-visual reveal" aria-hidden="true">
-      <div class="road"></div><div class="crack"></div>
-      <svg class="fob-big" viewBox="0 0 200 360"><use href="#fob"/></svg>
-      <span class="pill p1"><svg><use href="#i-key"/></svg>Smart keys</span>
-      <span class="pill p2"><svg><use href="#i-zap"/></svg>Push-to-start</span>
-      <span class="pill p3"><svg><use href="#i-cog"/></svg>Programmed on-site</span>
+    <div class="spare-visual reveal">
+      <img src="assets/images/locksmith/keys-leather-900.webp" srcset="assets/images/locksmith/keys-leather-520.webp 520w, assets/images/locksmith/keys-leather-900.webp 900w" sizes="(max-width: 980px) 100vw, 560px" width="900" height="675" alt="Car key fob and metal keys on a black leather seat" loading="lazy" decoding="async">
     </div>
     <div class="reveal" style="--d:.1s">
       <span class="eyebrow">Spare car keys</span>
-      <h2 class="display">Only one car key?<br><span class="grad-text">Don't wait until it's lost.</span></h2>
+      <h2 class="display">Only one car key?<br><span class="accent">Don't wait until it's lost.</span></h2>
       <p class="lead">Replacing your only key after it's gone is the hardest way to do it. Get a spare cut and programmed now — we come to you and handle it right in your driveway.</p>
       <div class="key-types"><span>Smart keys</span><span>Push-to-start</span><span>Key fobs</span><span>Remotes</span><span>Transponder keys</span></div>
       <a class="btn btn-primary btn-lg" href="#quote"><svg><use href="#i-key"/></svg>Get a spare key quote</a>
@@ -504,7 +467,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Why Locksmith Express MK</span>
-      <h2 class="h2 display">Your trusted<br><span class="grad-text">locksmith partner.</span></h2>
+      <h2 class="h2 display">Your trusted<br><span class="accent">locksmith partner.</span></h2>
     </div>
     <div class="why-grid">
       <div class="why reveal"><svg><use href="#i-clock"/></svg><h3>Open 24/7/365</h3><p>Nights, weekends and holidays. Emergencies are always open.</p></div>
@@ -523,7 +486,7 @@
     <div class="areas-head reveal">
       <div>
         <span class="eyebrow">Service areas</span>
-        <h2 class="h2 display">A locksmith <span class="grad-text">near you.</span></h2>
+        <h2 class="h2 display">A locksmith <span class="accent">near you.</span></h2>
       </div>
       <p class="lead">Mobile locksmith service across Springfield, Hampden County and Western Massachusetts — available 24/7 in every town on the map.</p>
     </div>
@@ -591,7 +554,7 @@
   <div class="container about">
     <div class="reveal">
       <span class="eyebrow">About us</span>
-      <h2 class="display">Your 24 hour locksmith in <span class="grad-text">Springfield, MA</span></h2>
+      <h2 class="display">Your 24 hour locksmith in <span class="accent">Springfield, MA</span></h2>
     </div>
     <div class="prose reveal" style="--d:.1s">
       <p><strong>Locksmith Express MK</strong> is a fully mobile locksmith serving Springfield and the surrounding towns of Western Massachusetts. Locked out of your car at 2 a.m., lost your only car key, moving into a new home or upgrading security at your business — our technicians come to you with the tools to get it done on the spot.</p>
@@ -621,7 +584,7 @@
   <div class="container faq-wrap">
     <div class="section-head reveal">
       <span class="eyebrow">FAQ</span>
-      <h2 class="h2 display">Questions?<br><span class="grad-text">Answered.</span></h2>
+      <h2 class="h2 display">Questions?<br><span class="accent">Answered.</span></h2>
       <p class="lead">Still unsure? Call <a href="tel:+14134331135" style="color:#fff;font-weight:800">(413) 433-1135</a> — free consultations, 24/7.</p>
     </div>
     <div class="faq">
@@ -643,7 +606,7 @@
   <div class="container contact-grid">
     <div class="reveal">
       <span class="eyebrow">Contact us</span>
-      <h2 class="display contact-title">Let's get you<br><span class="grad-text">back in.</span></h2>
+      <h2 class="display contact-title">Let's get you<br><span class="accent">back in.</span></h2>
       <p class="lead">Call, email or send the form. For lockouts and emergencies, calling is fastest.</p>
       <ul class="contact-list">
         <li><a class="contact-item" href="tel:+14134331135"><span class="ci"><svg><use href="#i-phone"/></svg></span><div><small>Phone</small><strong>(413) 433-1135</strong><span>Tap to call — 24/7</span></div></a></li>
