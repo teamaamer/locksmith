@@ -51,56 +51,6 @@ const CONFIG = {
   mobileNav && $$("a", mobileNav).forEach((a) => a.addEventListener("click", () => setMenu(false)));
   document.addEventListener("keydown", (e) => e.key === "Escape" && setMenu(false));
 
-  /* ---------- Safe-dial hero art ---------- */
-  const NS = "http://www.w3.org/2000/svg";
-  const mk = (tag, attrs) => {
-    const n = document.createElementNS(NS, tag);
-    for (const k in attrs) n.setAttribute(k, attrs[k]);
-    return n;
-  };
-  const outer = $("#dialOuter");
-  if (outer) {
-    const c = 500;
-    outer.appendChild(mk("circle", { cx: c, cy: c, r: 488, fill: "none", stroke: "rgba(255,138,43,.22)", "stroke-width": 2 }));
-    outer.appendChild(mk("circle", { cx: c, cy: c, r: 330, fill: "none", stroke: "rgba(255,138,43,.12)", "stroke-width": 1.5 }));
-    for (let i = 0; i < 100; i++) {
-      const a = (i * 3.6 - 90) * (Math.PI / 180);
-      const major = i % 10 === 0, mid = i % 5 === 0;
-      const r1 = 474, r2 = major ? 420 : mid ? 438 : 452;
-      outer.appendChild(mk("line", {
-        x1: c + r1 * Math.cos(a), y1: c + r1 * Math.sin(a),
-        x2: c + r2 * Math.cos(a), y2: c + r2 * Math.sin(a),
-        stroke: major ? "rgba(255,170,80,.75)" : "rgba(255,138,43,.35)",
-        "stroke-width": major ? 4 : 2, "stroke-linecap": "round",
-      }));
-      if (major) {
-        const t = mk("text", {
-          x: c + 388 * Math.cos(a), y: c + 388 * Math.sin(a) + 9,
-          "text-anchor": "middle", fill: "rgba(255,190,120,.6)",
-          "font-size": 28, "font-weight": 800, "font-family": "Archivo, sans-serif",
-        });
-        t.textContent = i;
-        outer.appendChild(t);
-      }
-    }
-  }
-  const inner = $("#dialInner");
-  if (inner) {
-    const c = 250;
-    inner.appendChild(mk("circle", { cx: c, cy: c, r: 238, fill: "rgba(255,106,19,.03)", stroke: "rgba(255,138,43,.3)", "stroke-width": 2 }));
-    for (let i = 0; i < 90; i++) {
-      const a = (i * 4) * (Math.PI / 180);
-      inner.appendChild(mk("line", {
-        x1: c + 236 * Math.cos(a), y1: c + 236 * Math.sin(a),
-        x2: c + 216 * Math.cos(a), y2: c + 216 * Math.sin(a),
-        stroke: "rgba(255,138,43,.28)", "stroke-width": 2,
-      }));
-    }
-    inner.appendChild(mk("circle", { cx: c, cy: c, r: 150, fill: "none", stroke: "rgba(255,182,39,.25)", "stroke-width": 2, "stroke-dasharray": "2 10" }));
-    inner.appendChild(mk("circle", { cx: c, cy: c, r: 70, fill: "none", stroke: "rgba(255,138,43,.35)", "stroke-width": 3 }));
-    inner.appendChild(mk("path", { d: "M250 12 l14 26 h-28z", fill: "rgba(255,182,39,.7)" }));
-  }
-
   /* ---------- Reveal on scroll ---------- */
   const reveals = $$(".reveal");
   if (!reduceMotion && "IntersectionObserver" in window) {
@@ -112,25 +62,6 @@ const CONFIG = {
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add("in"));
-  }
-
-  /* ---------- Count-up numbers ---------- */
-  const counters = $$("[data-count]");
-  if (!reduceMotion && "IntersectionObserver" in window) {
-    const co = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (!en.isIntersecting) return;
-        const el = en.target, end = +el.dataset.count, t0 = performance.now(), dur = 1200;
-        const tick = (t) => {
-          const p = Math.min(1, (t - t0) / dur);
-          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-        co.unobserve(el);
-      });
-    }, { threshold: 0.6 });
-    counters.forEach((el) => co.observe(el));
   }
 
   /* ---------- Card spotlight follows the cursor ---------- */

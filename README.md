@@ -36,7 +36,7 @@ Paste Google Tag Manager / GA4 / Meta Pixel code in `<head>` where marked. Each 
 
 ## 3. Before launch — confirm with the client
 
-- **Google reviews buttons**: replace the two `https://www.google.com/search?q=Locksmith+Express+MK` links with the real Google Business Profile link and the "write a review" link. (No testimonials are written on the page on purpose — only real reviews should be shown. A GHL Reputation widget can go where the comment says.)
+- **Google reviews**: the homepage links to the supplied Google Business Profile, where customers can read or leave a review.
 - **Logo**: `assets/logo.png/.webp` was cut from a screenshot. Swap in the original logo file for the sharpest result.
 - **Schema (`<script type="application/ld+json">`)**: add the city/street address exactly as on the Google Business Profile (if shown publicly) and a `"sameAs": [...]` list with the Facebook / Instagram / Google profile URLs.
 - Claims used come from the client's current site and posts: 24/7, mobile, no-damage entry, keys made & programmed on-site, free consultations, quality products. Remove any that don't apply.
