@@ -1,0 +1,1 @@
+{ "name": "locksmith-express-mk", "private": true, "type": "module", "scripts": { "build": "node tools/build.mjs", "images": "python3 tools/optimize-images.py", "dev": "node tools/build.mjs && node server.mjs" } }

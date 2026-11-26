@@ -1,0 +1,923 @@
+[
+ {
+  "city": "Springfield",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "springfield",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "city",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "automotive-locksmith",
+   "residential-locksmith",
+   "commercial-locksmith",
+   "car-key-programming",
+   "lock-rekey-service",
+   "lock-change-service",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Chicopee",
+   "West Springfield",
+   "Agawam",
+   "East Longmeadow",
+   "Wilbraham",
+   "Ludlow"
+  ],
+  "seoTitle": "24/7 Locksmith in Springfield, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Springfield, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "emergency-car-lockout",
+  "localDescription": "Springfield is the largest city in Western Massachusetts and the seat of Hampden County. Locksmith Express MK is based around the Springfield area, so it is the heart of our mobile service region.",
+  "needs": [
+   "Apartment and multi-family building lockouts",
+   "Car lockouts in driveways, street parking and lots",
+   "Storefront and office lock repairs"
+  ],
+  "localFaq": {
+   "q": "Do you serve all of Springfield?",
+   "a": "We provide mobile locksmith service across the Springfield area. Share your address or neighborhood when you call and we will confirm availability and an estimated response time."
+  }
+ },
+ {
+  "city": "Chicopee",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "chicopee",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "city",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "automotive-locksmith",
+   "lockout-service",
+   "residential-locksmith",
+   "lock-rekey-service",
+   "car-key-programming",
+   "commercial-locksmith",
+   "lock-change-service",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Springfield",
+   "Holyoke",
+   "Ludlow",
+   "West Springfield"
+  ],
+  "seoTitle": "Mobile Locksmith in Chicopee, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Chicopee, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "emergency-car-lockout",
+  "localDescription": "Chicopee sits just north of Springfield along the Connecticut River, with a mix of residential neighborhoods, shopping areas and commercial properties.",
+  "needs": [
+   "Car lockouts and spare keys for commuters",
+   "Home lockouts and rekeying",
+   "Lock repairs for small businesses"
+  ],
+  "localFaq": {
+   "q": "Can you help with a car lockout in Chicopee?",
+   "a": "Yes. Car lockout assistance is a core service. Call with your location and vehicle details so we can confirm availability."
+  }
+ },
+ {
+  "city": "Agawam",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "agawam",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "residential-locksmith",
+   "lock-rekey-service",
+   "lockout-service",
+   "automotive-locksmith",
+   "lock-change-service",
+   "keypad-installation",
+   "car-key-programming",
+   "commercial-locksmith"
+  ],
+  "nearbyCities": [
+   "West Springfield",
+   "Southwick",
+   "Springfield",
+   "Westfield"
+  ],
+  "seoTitle": "Mobile Locksmith in Agawam, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Agawam, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "residential-home",
+  "localDescription": "Agawam lies southwest of Springfield and is largely residential, with commercial corridors along its main roads.",
+  "needs": [
+   "Single-family home lockouts and deadbolt upgrades",
+   "Rekeying after buying or renting a home",
+   "Car key replacement for family vehicles"
+  ],
+  "localFaq": {
+   "q": "Do you offer rekeying in Agawam?",
+   "a": "Yes. Rekeying is available as a mobile service. Contact us to confirm your lock type and request a quote."
+  }
+ },
+ {
+  "city": "East Longmeadow",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "east-longmeadow",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "residential-locksmith",
+   "keypad-installation",
+   "lock-change-service",
+   "lockout-service",
+   "automotive-locksmith",
+   "commercial-locksmith",
+   "lock-rekey-service",
+   "car-key-programming"
+  ],
+  "nearbyCities": [
+   "Springfield",
+   "Wilbraham",
+   "Hampden",
+   "Ludlow"
+  ],
+  "seoTitle": "Mobile Locksmith in East Longmeadow, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in East Longmeadow, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "smart-lock-installation",
+  "localDescription": "East Longmeadow is a residential town east of Springfield with local shops and professional offices.",
+  "needs": [
+   "Home lockouts and lock changes",
+   "Smart lock and keypad installation",
+   "Office lock service"
+  ],
+  "localFaq": {
+   "q": "Do you install smart locks in East Longmeadow?",
+   "a": "Yes. Keypad and smart lock installation is available. Contact us with your door details to confirm compatible products."
+  }
+ },
+ {
+  "city": "Granville",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "granville",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "rural",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "residential-locksmith",
+   "lock-change-service",
+   "lock-rekey-service",
+   "automotive-locksmith",
+   "car-key-programming",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "nearbyCities": [
+   "Southwick",
+   "Westfield",
+   "Russell",
+   "Montgomery"
+  ],
+  "seoTitle": "Mobile Locksmith in Granville, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Granville, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "locksmith-service-van",
+  "localDescription": "Granville is a rural hill town in western Hampden County, so distances can be longer than in the Springfield area.",
+  "needs": [
+   "Lockouts at rural and seasonal properties",
+   "Lock changes on older homes",
+   "Spare keys before a long drive"
+  ],
+  "localFaq": {
+   "q": "How long will it take to reach Granville?",
+   "a": "Because Granville is farther from Springfield, arrival depends on technician availability and distance. Call (413) 433-1135 for an estimated response time."
+  }
+ },
+ {
+  "city": "Holyoke",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "holyoke",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "city",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "commercial-locksmith",
+   "residential-locksmith",
+   "automotive-locksmith",
+   "lock-rekey-service",
+   "lock-change-service",
+   "car-key-programming",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Chicopee",
+   "Springfield",
+   "Westfield"
+  ],
+  "seoTitle": "Mobile Locksmith in Holyoke, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Holyoke, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "commercial-locksmith",
+  "localDescription": "Holyoke is a city north of Chicopee on the Connecticut River with dense residential blocks, mixed-use buildings and commercial properties.",
+  "needs": [
+   "Apartment and mixed-use building lock service",
+   "Business door repairs and rekeying",
+   "Car lockouts and replacement keys"
+  ],
+  "localFaq": {
+   "q": "Do you help businesses in Holyoke?",
+   "a": "Yes. Commercial lock repair, rekeying and lockout assistance are available. Call with your location to confirm availability."
+  }
+ },
+ {
+  "city": "Hampden",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "hampden",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "residential-locksmith",
+   "lockout-service",
+   "lock-rekey-service",
+   "lock-change-service",
+   "automotive-locksmith",
+   "car-key-programming",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "nearbyCities": [
+   "Wilbraham",
+   "East Longmeadow",
+   "Ludlow",
+   "Palmer"
+  ],
+  "seoTitle": "Mobile Locksmith in Hampden, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Hampden, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "residential-home",
+  "localDescription": "Hampden is a small residential town east of Springfield with larger lots and quieter streets.",
+  "needs": [
+   "Home lockouts and deadbolt replacement",
+   "Rekeying after moving in",
+   "Car key spares for household vehicles"
+  ],
+  "localFaq": {
+   "q": "Is mobile locksmith service available in Hampden?",
+   "a": "Yes. Contact us with your address for confirmation and an estimated response time."
+  }
+ },
+ {
+  "city": "Ludlow",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "ludlow",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "automotive-locksmith",
+   "commercial-locksmith",
+   "residential-locksmith",
+   "lock-rekey-service",
+   "lock-change-service",
+   "car-key-programming",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Chicopee",
+   "Springfield",
+   "Wilbraham",
+   "Hampden",
+   "Palmer"
+  ],
+  "seoTitle": "Mobile Locksmith in Ludlow, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Ludlow, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "commercial-door-repair",
+  "localDescription": "Ludlow is east of Chicopee and Springfield, with residential streets, local businesses and industrial areas.",
+  "needs": [
+   "Home and car lockouts",
+   "Commercial and light-industrial lock service",
+   "Rekeying and lock changes"
+  ],
+  "localFaq": {
+   "q": "Do you handle commercial doors in Ludlow?",
+   "a": "Yes. Commercial lock repair, rekeying and lockout assistance are part of our service. Contact us for confirmation."
+  }
+ },
+ {
+  "city": "Montgomery",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "montgomery",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "rural",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "residential-locksmith",
+   "lock-rekey-service",
+   "lock-change-service",
+   "automotive-locksmith",
+   "car-key-programming",
+   "safe-locksmith",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Westfield",
+   "Russell",
+   "Granville",
+   "Southwick"
+  ],
+  "seoTitle": "Mobile Locksmith in Montgomery, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Montgomery, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "locksmith-service-van",
+  "localDescription": "Montgomery is a small hill town west of Springfield, so response times can be longer than in nearby cities.",
+  "needs": [
+   "Lockouts at homes with long driveways",
+   "Lock changes and rekeying",
+   "Spare keys before travel"
+  ],
+  "localFaq": {
+   "q": "Do you serve small towns like Montgomery?",
+   "a": "Montgomery is on our advertised service list. Call (413) 433-1135 to confirm availability and an estimated response time for your address."
+  }
+ },
+ {
+  "city": "Palmer",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "palmer",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "automotive-locksmith",
+   "lockout-service",
+   "residential-locksmith",
+   "commercial-locksmith",
+   "car-key-programming",
+   "lock-rekey-service",
+   "lock-change-service",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Ludlow",
+   "Hampden",
+   "Wilbraham"
+  ],
+  "seoTitle": "Mobile Locksmith in Palmer, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Palmer, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "emergency-car-lockout",
+  "localDescription": "Palmer is a town east of Ludlow and Hampden, with village centers and highway-adjacent businesses.",
+  "needs": [
+   "Car lockouts near highways and lots",
+   "Home and business lock service",
+   "Replacement car keys"
+  ],
+  "localFaq": {
+   "q": "Can you help with a car lockout in Palmer?",
+   "a": "Yes. Automotive lockout assistance is a core service. Call with your location and vehicle details to confirm availability."
+  }
+ },
+ {
+  "city": "Russell",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "russell",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "rural",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "residential-locksmith",
+   "lock-change-service",
+   "automotive-locksmith",
+   "lock-rekey-service",
+   "car-key-programming",
+   "safe-locksmith",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Westfield",
+   "Montgomery",
+   "Granville"
+  ],
+  "seoTitle": "Mobile Locksmith in Russell, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Russell, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "locksmith-service-van",
+  "localDescription": "Russell is a small hill town west of Westfield with a rural character, so distances can be longer.",
+  "needs": [
+   "Home lockouts and broken-key situations",
+   "Lock repair on older hardware",
+   "Car lockouts on rural roads"
+  ],
+  "localFaq": {
+   "q": "What should I tell you when I call from Russell?",
+   "a": "Share your address or nearest cross street, what you are locked out of, and any vehicle details. We will confirm availability and an estimated response time."
+  }
+ },
+ {
+  "city": "Southwick",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "southwick",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "residential-locksmith",
+   "lockout-service",
+   "lock-change-service",
+   "lock-rekey-service",
+   "automotive-locksmith",
+   "car-key-programming",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "nearbyCities": [
+   "Agawam",
+   "Westfield",
+   "Granville"
+  ],
+  "seoTitle": "Mobile Locksmith in Southwick, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Southwick, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "residential-home",
+  "localDescription": "Southwick is in the southwest corner of Massachusetts near the Connecticut border, a mix of residential areas and open land.",
+  "needs": [
+   "Home lockouts and deadbolt service",
+   "Lock changes for older homes",
+   "Car key spares and lockouts"
+  ],
+  "localFaq": {
+   "q": "Do you also serve nearby Connecticut towns?",
+   "a": "We serve Connecticut service areas, and specific Connecticut cities are being confirmed. Call to ask about your address."
+  }
+ },
+ {
+  "city": "West Springfield",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "west-springfield",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "city",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "residential-locksmith",
+   "lock-rekey-service",
+   "car-key-programming",
+   "lock-change-service",
+   "keypad-installation"
+  ],
+  "nearbyCities": [
+   "Springfield",
+   "Agawam",
+   "Chicopee",
+   "Holyoke"
+  ],
+  "seoTitle": "Mobile Locksmith in West Springfield, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in West Springfield, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "commercial-locksmith",
+  "localDescription": "West Springfield sits across the Connecticut River from Springfield, with busy commercial roads, shopping areas and residential neighborhoods.",
+  "needs": [
+   "Retail and office lock repair",
+   "Car lockouts in shopping-area parking lots",
+   "Home rekeying and lock changes"
+  ],
+  "localFaq": {
+   "q": "Do you work with retail businesses in West Springfield?",
+   "a": "Yes. Commercial lock repair, rekeying and lockout assistance are available. Contact us to confirm your door hardware."
+  }
+ },
+ {
+  "city": "Westfield",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "westfield",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "city",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "lockout-service",
+   "residential-locksmith",
+   "automotive-locksmith",
+   "commercial-locksmith",
+   "lock-rekey-service",
+   "keypad-installation",
+   "car-key-programming",
+   "lock-change-service"
+  ],
+  "nearbyCities": [
+   "West Springfield",
+   "Southwick",
+   "Russell",
+   "Montgomery",
+   "Agawam"
+  ],
+  "seoTitle": "Mobile Locksmith in Westfield, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Westfield, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "residential-door-repair",
+  "localDescription": "Westfield is a city west of Springfield with a downtown, residential neighborhoods and surrounding hill towns.",
+  "needs": [
+   "Home and car lockouts",
+   "Downtown business lock service",
+   "Rekeying and smart lock installation"
+  ],
+  "localFaq": {
+   "q": "Can you help with a house lockout in Westfield?",
+   "a": "Yes. House lockout assistance is a core service. Contact us with your address for availability and an estimated response time."
+  }
+ },
+ {
+  "city": "Wilbraham",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "slug": "wilbraham",
+  "active": true,
+  "clientConfirmed": true,
+  "confirmationNote": "Listed on the existing live website; client to reconfirm.",
+  "kind": "suburb",
+  "services": [
+   "residential-locksmith",
+   "commercial-locksmith",
+   "automotive-locksmith",
+   "lockout-service",
+   "car-key-programming",
+   "lock-change-service",
+   "lock-rekey-service",
+   "keypad-installation",
+   "safe-locksmith"
+  ],
+  "emphasis": [
+   "residential-locksmith",
+   "keypad-installation",
+   "safe-locksmith",
+   "lockout-service",
+   "lock-change-service",
+   "automotive-locksmith",
+   "lock-rekey-service",
+   "car-key-programming"
+  ],
+  "nearbyCities": [
+   "Springfield",
+   "East Longmeadow",
+   "Hampden",
+   "Ludlow",
+   "Palmer"
+  ],
+  "seoTitle": "Mobile Locksmith in Wilbraham, MA | Locksmith Express MK",
+  "metaDescription": "Need a locksmith in Wilbraham, MA? Locksmith Express MK offers mobile lockout help, residential and commercial locksmith services and car key assistance. Call (413) 433-1135.",
+  "heroImage": "smart-lock-installation",
+  "localDescription": "Wilbraham is a residential town east of Springfield with larger homes and wooded streets.",
+  "needs": [
+   "Home lockouts and lock upgrades",
+   "Smart lock and keypad installation",
+   "Safe opening and combination changes"
+  ],
+  "localFaq": {
+   "q": "Do you help with home safes in Wilbraham?",
+   "a": "Safe locksmith service is available, including opening assistance and combination changes. Contact us with your safe's make and model."
+  }
+ },
+ {
+  "city": "Enfield",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "enfield",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Enfield, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Suffield",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "suffield",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Suffield, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Windsor Locks",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "windsor-locks",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Windsor Locks, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "East Windsor",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "east-windsor",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in East Windsor, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Somers",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "somers",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Somers, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Windsor",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "windsor",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Windsor, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Hartford",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "hartford",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Hartford, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "South Windsor",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "south-windsor",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in South Windsor, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Ellington",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "ellington",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Ellington, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ },
+ {
+  "city": "Vernon",
+  "state": "Connecticut",
+  "stateCode": "CT",
+  "slug": "vernon",
+  "active": false,
+  "clientConfirmed": false,
+  "confirmationNote": "Candidate only. Do not publish until the client confirms coverage.",
+  "services": [],
+  "nearbyCities": [],
+  "seoTitle": "Mobile Locksmith in Vernon, CT | Locksmith Express MK",
+  "metaDescription": "",
+  "heroImage": "connecticut-illustrative",
+  "localDescription": "",
+  "needs": [],
+  "localFaq": null
+ }
+]

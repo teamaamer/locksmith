@@ -1,0 +1,7 @@
+node_modules
+.env
+.env.*
+!.env.example
+.DS_Store
+assets/images/locksmith/newimages/
+assets/MASTER_PROMPT.md

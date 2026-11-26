@@ -1,0 +1,212 @@
+[
+ {
+  "url": "/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/residential-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/commercial-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/automotive-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/lockout-service/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/lock-change-service/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/lock-rekey-service/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/keypad-installation/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/safe-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/car-key-programming/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/connecticut/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/springfield/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/chicopee/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/agawam/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/east-longmeadow/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/granville/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/holyoke/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/hampden/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/ludlow/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/montgomery/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/palmer/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/russell/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/southwick/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/west-springfield/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/westfield/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/areas/massachusetts/wilbraham/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/lp/emergency-locksmith/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/lp/car-lockout/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/lp/car-key-replacement/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/lp/residential-locksmith/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/lp/commercial-locksmith/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/lp/springfield-emergency-locksmith/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/lp/chicopee-car-lockout/",
+  "indexable": false,
+  "kind": "lp"
+ },
+ {
+  "url": "/about/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/contact/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/faq/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/privacy-policy/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/terms-of-service/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/thank-you/",
+  "indexable": false,
+  "kind": "page"
+ }
+]

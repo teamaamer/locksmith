@@ -1,0 +1,28 @@
+{
+  "name": "Locksmith Express MK 24/7",
+  "shortName": "Locksmith Express MK",
+  "url": "https://www.locksmithexpressmk.com",
+  "phone": "(413) 433-1135",
+  "phoneTel": "+14134331135",
+  "email": "locksmithexpressmk@gmail.com",
+  "plannedEmail": "info@locksmithexpressmk.com",
+  "hours": "24 hours a day, 7 days a week",
+  "tagline": "Mobile locksmith services for your home, business and vehicle.",
+  "logo": "/assets/logo.png",
+  "logoWebp": "/assets/logo.webp",
+  "googleReviewsUrl": "https://www.google.com/search?q=Locksmith+Express+MK&stick=H4sIAAAAAAAA_-NgU1I1qDBJNUtLNk4xskxKTU5LNjC3MqhITTJOTjExSkpJsjRJNbAwXsQq4pOfnF2cm1mSoeBaUVCUWlys4OsNAKwsum9AAAAA&hl=en&mat=CeM41G0VGsSWElcBzAmVZp2oMogfULU-qGp22VxYqtOKrAHL4C8ekhwDOG5w7T5wU95z_Lm-tS1PepUXolme0TVfvoeXeWAAGIQaWeJExY2-NmZJJoBAVeBzoWkE5msq1nE&authuser=0&ved=1t:350944&zx=1795598765426",
+  "tracking": {
+    "_note": "IDs copied from the current live website's own gtag tags. Confirm with client before launch.",
+    "ga4": "G-EKMMEP77NM",
+    "googleAds": "AW-18069138786",
+    "gtm": ""
+  },
+  "social": { "instagram": "", "facebook": "" },
+  "verified": {
+    "_note": "Only claims confirmed by the client may be switched on. All default to false.",
+    "licensed": false,
+    "insured": false,
+    "responseTime": false,
+    "reviewCount": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "home": ["247","areas","carlockout","lostkeys","rekey","rekeyreplace","commercial","keypad","cost","arrival","ownership","repair"],
+ "items": {
+  "247": {"q":"Are you available 24/7?","a":"Locksmith Express MK advertises emergency locksmith service 24 hours a day, seven days a week. Call our team to confirm current availability at your location."},
+  "areas": {"q":"What areas do you serve?","a":"We serve communities in Massachusetts and Connecticut. Visit our service-area pages or contact us to confirm coverage for your address or ZIP code."},
+  "carlockout": {"q":"Can you help if I am locked out of my car?","a":"Yes. Automotive lockout assistance is one of our core services. Contact our team with your location and vehicle information."},
+  "lostkeys": {"q":"Can you replace lost car keys?","a":"We offer automotive key replacement and programming services for compatible vehicles. Please provide your vehicle's year, make, and model so we can confirm the available options."},
+  "rekey": {"q":"What is lock rekeying?","a":"Rekeying changes the keys that operate an existing compatible lock, allowing you to retain the existing lock hardware while preventing the old keys from operating it."},
+  "rekeyreplace": {"q":"Should I rekey my lock or replace it?","a":"The best option depends on the lock's condition, compatibility, and your security requirements. Rekeying may be suitable for functional locks, while damaged or outdated locks may need replacement."},
+  "commercial": {"q":"Do you provide commercial locksmith services?","a":"Yes. Our commercial services include lock repairs, replacement, rekeying, master key systems, and other confirmed business security services."},
+  "keypad": {"q":"Can you install keypad or smart locks?","a":"We provide keypad installation and keyless entry solutions. Contact us to discuss your door hardware and compatible products."},
+  "cost": {"q":"How much does a locksmith service cost?","a":"Pricing depends on the service required, location, hardware, vehicle compatibility, and other job details. Contact us to discuss your needs and request a quote."},
+  "arrival": {"q":"How quickly can a locksmith arrive?","a":"Arrival times depend on technician availability, your location, traffic, and current demand. Call our team for an estimated response time."},
+  "ownership": {"q":"Do I need proof of ownership or authorization?","a":"For security reasons, proof of ownership or authorization may be required before providing access-related locksmith services."},
+  "repair": {"q":"Can you repair or replace a broken lock?","a":"Some locks can be repaired, while others may require replacement. The appropriate solution depends on the hardware and damage."}
+ }
+}
