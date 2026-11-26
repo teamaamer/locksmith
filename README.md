@@ -13,6 +13,6 @@ docs/              reports: implementation checklist, asset + route inventory, s
 design-references/ the two supplied mockups
 ```
 
-Workflow: edit `data/*.json` or `tools/*.mjs` → `node tools/build.mjs` → `node tools/qa.mjs` → commit generated HTML.
+Workflow: edit `data/*.json` or `tools/*.mjs` → `node tools/build.mjs` (or `npm run generate`) → `node tools/qa.mjs` → commit generated HTML.
 
 Lead delivery needs `RESEND_API_KEY` + `EMAIL_FROM` (or `GHL_WEBHOOK_URL`) in Vercel — see `.env.example`.
