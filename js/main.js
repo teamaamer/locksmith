@@ -125,7 +125,7 @@
       sending = true; btn.disabled = true; btn.classList.add("loading"); status.textContent = "";
       track("quote_form_submit", { service_type: payload.service, city: payload.city, state: payload.state });
       try {
-        const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+        const res = await fetch("/api/contact/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
         const json = await res.json().catch(() => ({}));
         if (!res.ok || !json.ok) throw new Error(json.error || "failed");
         track("quote_form_success", { service_type: payload.service, city: payload.city, state: payload.state });

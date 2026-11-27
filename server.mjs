@@ -7,7 +7,7 @@ const { default: contact } = await import("./api/contact.js");
 const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".xml": "application/xml", ".txt": "text/plain", ".webmanifest": "application/manifest+json" };
 http.createServer(async (req, res) => {
   const url = new URL(req.url, "http://x");
-  if (url.pathname === "/api/contact") {
+  if (url.pathname.replace(/\/$/, "") === "/api/contact") {
     let raw = ""; for await (const c of req) raw += c;
     req.body = raw; res.status = (n) => ((res.statusCode = n), res); res.json = (o) => (res.setHeader("Content-Type", "application/json"), res.end(JSON.stringify(o)));
     return contact(req, res);
