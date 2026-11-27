@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   try {
     if (process.env.RESEND_API_KEY && process.env.EMAIL_FROM) {
       const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: process.env.EMAIL_FROM, to: [to], subject: `New quote request: ${d.service}${d.city ? " — " + d.city : ""}`, html, text, reply_to: d.email || undefined }) });
-      if (!r.ok) throw new Error("email " + r.status);
+      if (!r.ok) { const j = await r.json().catch(() => ({})); const err = new Error(`email ${r.status} ${j.name || ""}: ${j.message || ""}`); err.detail = j.name || `status_${r.status}`; throw err; }
       delivered = true;
     }
     if (process.env.GHL_WEBHOOK_URL) {
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
     }
   } catch (e) {
     console.error("[contact] delivery failed:", e.message);
-    return res.status(502).json({ ok: false, error: "delivery" });
+    return res.status(502).json({ ok: false, error: "delivery", detail: e.detail || "" });
   }
   if (!delivered && process.env.DEV_DRY_RUN === "1") { console.log("[contact] DRY RUN lead:\n" + text); delivered = true; }
   if (!delivered) { console.error("[contact] not configured: set RESEND_API_KEY+EMAIL_FROM or GHL_WEBHOOK_URL"); return res.status(503).json({ ok: false, error: "not_configured" }); }
