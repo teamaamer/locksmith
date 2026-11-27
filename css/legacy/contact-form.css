@@ -1,0 +1,510 @@
+/**
+ * Contact Form 7 - Ultra Modern Design
+ *
+ * @package Service_Locksmith
+ * @author Yousef T Alhayek
+ * @since 1.0.0
+ */
+
+/* ========================================================================
+   CONTACT FORM 7 - ULTRA MODERN & PROFESSIONAL DESIGN
+   ======================================================================== */
+
+/* Form Container */
+.wpcf7 {
+    position: relative;
+}
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.wpcf7-form p {
+    margin: 0;
+}
+
+.wpcf7-form p br {
+    display: none;
+}
+
+.wpcf7-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #334155;
+}
+
+.page-entry-content .wpcf7,
+.editor-content .wpcf7,
+.contact-form-wrapper .wpcf7,
+.cf7-wrapper .wpcf7 {
+    width: 100%;
+}
+
+.page-entry-content .wpcf7-form,
+.editor-content .wpcf7-form,
+.contact-form-wrapper .wpcf7-form,
+.cf7-wrapper .wpcf7-form {
+    gap: 1.125rem;
+}
+
+.cf7-wrapper .wpcf7-form label {
+    font-size: 0.875rem;
+}
+
+.cf7-wrapper .wpcf7-form input[type="text"],
+.cf7-wrapper .wpcf7-form input[type="email"],
+.cf7-wrapper .wpcf7-form input[type="tel"],
+.cf7-wrapper .wpcf7-form input[type="url"],
+.cf7-wrapper .wpcf7-form input[type="number"],
+.cf7-wrapper .wpcf7-form input[type="date"],
+.cf7-wrapper .wpcf7-form select,
+.cf7-wrapper .wpcf7-form textarea {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+}
+
+.cf7-wrapper .wpcf7-form textarea {
+    min-height: 130px;
+}
+
+.cf7-wrapper .wpcf7-form input[type="submit"],
+.cf7-wrapper .wpcf7-form button[type="submit"] {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+}
+/* Form Fields - Modern Input Design */
+.wpcf7-form-control-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form input[type="url"],
+.wpcf7-form input[type="number"],
+.wpcf7-form input[type="date"],
+.wpcf7-form select,
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1.0625rem;
+    font-family: inherit;
+    color: #1a202c !important;
+    font-weight: 500;
+    background-color: #F8F9FA !important;
+    border: 2px solid #E9ECEF;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 1.5;
+}
+
+
+/* Floating Label Effect */
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form input[type="tel"]:focus,
+.wpcf7-form input[type="url"]:focus,
+.wpcf7-form input[type="number"]:focus,
+.wpcf7-form input[type="date"]:focus,
+.wpcf7-form select:focus,
+.wpcf7-form textarea:focus {
+    background-color: #FFFFFF !important;
+    color: #1a202c !important;
+    border-color: #FF6B35;
+    box-shadow:
+        0 0 0 3px rgba(255, 107, 53, 0.1),
+        0 4px 12px rgba(255, 107, 53, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Placeholder Styling */
+.wpcf7-form input::placeholder,
+.wpcf7-form textarea::placeholder {
+    color: #9CA3AF !important;
+    opacity: 1;
+    font-weight: 400;
+}
+
+/* Textarea Specific */
+.wpcf7-form textarea {
+    min-height: 140px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+/* Select Dropdown */
+.wpcf7-form select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232C3E50' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+}
+
+/* Checkbox & Radio Buttons - Modern Design */
+.wpcf7-form input[type="checkbox"],
+.wpcf7-form input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+}
+
+.wpcf7-form .wpcf7-list-item {
+    margin: 0 0 0.75rem 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.wpcf7-form .wpcf7-list-item-label {
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: #495057;
+}
+
+/* ── Dark mode: keep form fields always light ── */
+@media (prefers-color-scheme: dark) {
+
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form input[type="tel"],
+    .wpcf7-form input[type="url"],
+    .wpcf7-form input[type="number"],
+    .wpcf7-form select,
+    .wpcf7-form textarea {
+        background-color: #F8F9FA !important;
+        border-color: #E9ECEF;
+        color: #1a202c !important;
+    }
+
+    .wpcf7-form input::placeholder,
+    .wpcf7-form textarea::placeholder {
+        color: #9CA3AF !important;
+    }
+}
+
+/* Submit Button - Ultra Modern */
+.wpcf7-form input[type="submit"],
+.wpcf7-form button[type="submit"] {
+    width: 100%;
+    padding: 1.125rem 2rem;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 50%, #ffad7a 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 8px 20px rgba(255, 107, 53, 0.35),
+        0 4px 8px rgba(255, 107, 53, 0.25);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--heading-font);
+}
+
+/* Ripple Effect on Submit */
+.wpcf7-form input[type="submit"]::before,
+.wpcf7-form button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.wpcf7-form input[type="submit"]:hover::before,
+.wpcf7-form button[type="submit"]:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.wpcf7-form input[type="submit"]:hover,
+.wpcf7-form button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 28px rgba(255, 107, 53, 0.45),
+        0 6px 16px rgba(255, 107, 53, 0.35);
+}
+
+.wpcf7-form input[type="submit"]:active,
+.wpcf7-form button[type="submit"]:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Disabled State */
+.wpcf7-form input[type="submit"]:disabled,
+.wpcf7-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Validation Messages - Modern Alert Design */
+.wpcf7-not-valid-tip {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    background: #fee;
+    border-left: 3px solid #dc3545;
+    border-radius: 4px;
+    animation: slideDown 0.3s ease;
+}
+
+.wpcf7-form .wpcf7-not-valid {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5 !important;
+}
+
+/* Response Messages */
+.wpcf7-response-output {
+    margin: 1.5rem 0 0;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border: 2px solid;
+    animation: slideDown 0.4s ease;
+}
+
+.wpcf7-validation-errors {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+.wpcf7-mail-sent-ok {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.wpcf7-mail-sent-ng,
+.wpcf7-aborted {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.wpcf7-spam-blocked {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/* Loading Spinner - Modern */
+.wpcf7-form .ajax-loader {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 107, 53, 0.2);
+    border-top-color: #FF6B35;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 0.75rem;
+    vertical-align: middle;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.wpcf7-form .ajax-loader.is-active {
+    display: inline-block;
+}
+
+/* File Upload - Modern Styling */
+.wpcf7-form input[type="file"] {
+    padding: 0.875rem 1rem;
+    font-size: 0.9375rem;
+    cursor: pointer;
+}
+
+.wpcf7-form input[type="file"]::file-selector-button {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.wpcf7-form input[type="file"]::file-selector-button:hover {
+    background: #ff8c5a;
+}
+
+/* Acceptance Checkbox */
+.wpcf7-form .wpcf7-acceptance .wpcf7-list-item {
+    margin: 0;
+}
+
+.wpcf7-form .wpcf7-acceptance input[type="checkbox"] {
+    margin-right: 0.625rem;
+}
+
+/* Quiz Field */
+.wpcf7-form .wpcf7-quiz-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+/* reCAPTCHA Container */
+.wpcf7-form .wpcf7-recaptcha {
+    margin: 1rem 0;
+}
+
+/* Screen Reader Text */
+.wpcf7-form .screen-reader-response {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================================================
+   DARK MODE SUPPORT (if needed in future)
+   ======================================================================== */
+@media (prefers-color-scheme: dark) {
+
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form input[type="tel"],
+    .wpcf7-form input[type="url"],
+    .wpcf7-form input[type="number"],
+    .wpcf7-form select,
+    .wpcf7-form textarea {
+        background-color: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+    }
+
+    .wpcf7-form input::placeholder,
+    .wpcf7-form textarea::placeholder {
+        color: #a0aec0;
+    }
+}
+
+/* ========================================================================
+   RESPONSIVE DESIGN
+   ======================================================================== */
+
+@media (max-width: 767px) {
+
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form input[type="tel"],
+    .wpcf7-form input[type="url"],
+    .wpcf7-form input[type="number"],
+    .wpcf7-form select,
+    .wpcf7-form textarea {
+        font-size: 16px;
+        /* Prevents iOS zoom */
+    }
+
+    .wpcf7-form input[type="submit"],
+    .wpcf7-form button[type="submit"] {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .wpcf7-form textarea {
+        min-height: 120px;
+    }
+}
+
+/* ========================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================================================== */
+
+/* Focus Visible for Keyboard Navigation */
+.wpcf7-form input:focus-visible,
+.wpcf7-form select:focus-visible,
+.wpcf7-form textarea:focus-visible,
+.wpcf7-form button:focus-visible {
+    outline: 3px solid #FF6B35;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+
+    .wpcf7-form input,
+    .wpcf7-form select,
+    .wpcf7-form textarea {
+        border-width: 3px;
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] .wpcf7-form select {
+    background-position: left 1rem center;
+    padding-right: 1.25rem;
+    padding-left: 2.5rem;
+}
+
+[dir="rtl"] .wpcf7-form input[type="checkbox"],
+[dir="rtl"] .wpcf7-form input[type="radio"] {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .wpcf7-not-valid-tip {
+    border-left: none;
+    border-right: 3px solid #dc3545;
+}

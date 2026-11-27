@@ -5,11 +5,6 @@
   "kind": "page"
  },
  {
-  "url": "/services/",
-  "indexable": true,
-  "kind": "page"
- },
- {
   "url": "/services/residential-locksmith/",
   "indexable": true,
   "kind": "page"
@@ -25,6 +20,11 @@
   "kind": "page"
  },
  {
+  "url": "/services/safe-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
   "url": "/services/lockout-service/",
   "indexable": true,
   "kind": "page"
@@ -35,22 +35,57 @@
   "kind": "page"
  },
  {
-  "url": "/services/lock-rekey-service/",
-  "indexable": true,
-  "kind": "page"
- },
- {
   "url": "/services/keypad-installation/",
   "indexable": true,
   "kind": "page"
  },
  {
-  "url": "/services/safe-locksmith/",
+  "url": "/services/lock-rekey-service/",
   "indexable": true,
   "kind": "page"
  },
  {
   "url": "/services/car-key-programming/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/chevrolet-gmc-cadillac-buick-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/ford-lincoln-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/honda-acura-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/hyundai-kia-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/jeep-dodge-chrysler-ram-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/mazda-mitsubishi-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/nissan-infiniti-locksmith/",
+  "indexable": true,
+  "kind": "page"
+ },
+ {
+  "url": "/services/",
   "indexable": true,
   "kind": "page"
  },

@@ -1,0 +1,1399 @@
+/* ==========================================================================
+   Static Pages — Professional Styles
+   Covers: page layout, hero, typography, all content components
+   ========================================================================== */
+
+/* ── Variables ── */
+:root {
+    --page-accent: #FF6B35;
+    --page-dark: #0f172a;
+    --page-text: #374151;
+    --page-muted: #6b7280;
+    --page-border: #e5e7eb;
+    --page-bg: #f8fafc;
+    --page-white: #ffffff;
+    --page-radius: 16px;
+    --page-radius-sm: 10px;
+    --page-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    --page-shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   PAGE HERO
+   ========================================================================== */
+
+.page-hero-wrap {
+    position: relative;
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+}
+
+/* With featured image */
+.page-hero-wrap--has-image {
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Plain (no image) */
+.page-hero-wrap--plain {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+}
+
+.page-hero-wrap--plain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.45);
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.page-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+/* Breadcrumb */
+.page-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 1.25rem;
+}
+
+.page-breadcrumb a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s;
+}
+
+.page-breadcrumb a:hover {
+    color: #fff;
+}
+
+.page-breadcrumb .fa-chevron-right {
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+
+.page-breadcrumb span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Page Title */
+.page-hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+}
+
+.page-hero-subtitle {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==========================================================================
+   PAGE BODY LAYOUT
+   ========================================================================== */
+
+.static-page {
+    background: var(--page-bg);
+}
+
+.page-body {
+    padding: 4rem 0 5rem;
+}
+
+.page-layout {
+    display: block;
+    /* Removed sidebar grid layout */
+    width: 100%;
+}
+
+/* Full-width when no sidebar */
+.page-layout:only-child,
+.page-layout .page-content-area:only-child {
+    grid-column: 1 / -1;
+}
+
+/* No sidebar → full width */
+.page-layout:not(:has(.page-sidebar)) {
+    grid-template-columns: 1fr;
+}
+
+/* ==========================================================================
+   PAGE ENTRY CONTENT — Base Typography
+   ========================================================================== */
+
+.page-entry-content {
+    background: var(--page-white);
+    border-radius: var(--page-radius);
+    padding: 3rem;
+    box-shadow: var(--page-shadow);
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: var(--page-text);
+}
+
+/* Headings */
+.page-entry-content h1,
+.page-entry-content h2,
+.page-entry-content h3,
+.page-entry-content h4,
+.page-entry-content h5,
+.page-entry-content h6 {
+    color: var(--page-dark);
+    font-weight: 800;
+    line-height: 1.3;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 100px;
+}
+
+.page-entry-content h1 {
+    font-size: 2.25rem;
+}
+
+.page-entry-content h2 {
+    font-size: 1.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--page-border);
+    position: relative;
+}
+
+.page-entry-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--page-accent);
+    border-radius: 3px;
+}
+
+.page-entry-content h3 {
+    font-size: 1.375rem;
+}
+
+.page-entry-content h4 {
+    font-size: 1.125rem;
+}
+
+.page-entry-content h5 {
+    font-size: 1rem;
+}
+
+.page-entry-content h6 {
+    font-size: 0.9375rem;
+    color: var(--page-muted);
+}
+
+/* First heading no top margin */
+.page-entry-content>*:first-child {
+    margin-top: 0;
+}
+
+.page-entry-content>*:last-child {
+    margin-bottom: 0;
+}
+
+/* Paragraphs */
+.page-entry-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Links */
+.page-entry-content a {
+    color: var(--page-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.page-entry-content a:hover {
+    color: #e55a25;
+}
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+.page-entry-content ul,
+.page-entry-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-entry-content li {
+    margin-bottom: 0.625rem;
+    line-height: 1.7;
+}
+
+/* Custom bullet list */
+.page-entry-content ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.page-entry-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    background: var(--page-accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Nested lists */
+.page-entry-content ul ul li::before {
+    background: transparent;
+    border: 2px solid var(--page-accent);
+}
+
+/* Ordered list */
+.page-entry-content ol {
+    counter-reset: ol-counter;
+    padding-left: 0;
+}
+
+.page-entry-content ol li {
+    list-style: none;
+    counter-increment: ol-counter;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+.page-entry-content ol li::before {
+    content: counter(ol-counter);
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: var(--page-accent);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   BLOCKQUOTE
+   ========================================================================== */
+
+.page-entry-content blockquote {
+    position: relative;
+    margin: 2.5rem 0;
+    padding: 2rem 2rem 2rem 3rem;
+    background: linear-gradient(135deg, #fff8f5, #fff3ee);
+    border-left: 5px solid var(--page-accent);
+    border-radius: 0 var(--page-radius-sm) var(--page-radius-sm) 0;
+    font-style: italic;
+    font-size: 1.125rem;
+    color: var(--page-dark);
+    line-height: 1.7;
+}
+
+.page-entry-content blockquote::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    font-size: 5rem;
+    color: var(--page-accent);
+    opacity: 0.25;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.page-entry-content blockquote cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--page-accent);
+}
+
+.page-entry-content blockquote cite::before {
+    content: '— ';
+}
+
+/* ==========================================================================
+   IMAGES
+   ========================================================================== */
+
+.page-entry-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--page-radius-sm);
+    box-shadow: var(--page-shadow);
+    margin: 1.5rem 0;
+}
+
+.page-entry-content figure {
+    margin: 2rem 0;
+}
+
+.page-entry-content figcaption {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--page-muted);
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+/* Image alignments */
+.page-entry-content .alignleft {
+    float: left;
+    margin: 0.5rem 2rem 1rem 0;
+    max-width: 50%;
+}
+
+.page-entry-content .alignright {
+    float: right;
+    margin: 0.5rem 0 1rem 2rem;
+    max-width: 50%;
+}
+
+.page-entry-content .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.page-entry-content .alignwide {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    max-width: calc(100% + 6rem);
+    border-radius: var(--page-radius);
+}
+
+.page-entry-content .alignfull {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    max-width: calc(100% + 6rem);
+    border-radius: 0;
+}
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+.page-entry-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9375rem;
+    border-radius: var(--page-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--page-shadow);
+}
+
+.page-entry-content thead {
+    background: linear-gradient(135deg, var(--page-dark), #1e3a5f);
+    color: #fff;
+}
+
+.page-entry-content th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+
+.page-entry-content td {
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid var(--page-border);
+    color: var(--page-text);
+    vertical-align: top;
+}
+
+.page-entry-content tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.page-entry-content tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.page-entry-content tbody tr:hover {
+    background: #fff3ee;
+}
+
+/* ==========================================================================
+   CODE
+   ========================================================================== */
+
+.page-entry-content code {
+    background: #f1f5f9;
+    color: var(--page-accent);
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+}
+
+.page-entry-content pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 1.75rem;
+    border-radius: var(--page-radius-sm);
+    overflow-x: auto;
+    font-size: 0.9rem;
+    margin: 2rem 0;
+    line-height: 1.7;
+    box-shadow: var(--page-shadow-lg);
+}
+
+.page-entry-content pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+
+/* ==========================================================================
+   HORIZONTAL RULE
+   ========================================================================== */
+
+.page-entry-content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--page-accent), transparent);
+    margin: 3rem 0;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   BUTTONS (WordPress button blocks)
+   ========================================================================== */
+
+.page-entry-content .wp-block-button__link,
+.page-entry-content .btn,
+.page-entry-content a.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.page-entry-content .wp-block-button.is-style-fill .wp-block-button__link,
+.page-entry-content .btn-primary {
+    background: var(--page-accent);
+    color: #fff;
+    border-color: var(--page-accent);
+}
+
+.page-entry-content .wp-block-button.is-style-fill .wp-block-button__link:hover,
+.page-entry-content .btn-primary:hover {
+    background: #e55a25;
+    border-color: #e55a25;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+    text-decoration: none;
+}
+
+.page-entry-content .wp-block-button.is-style-outline .wp-block-button__link,
+.page-entry-content .btn-outline {
+    background: transparent;
+    color: var(--page-accent);
+    border-color: var(--page-accent);
+}
+
+.page-entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover,
+.page-entry-content .btn-outline:hover {
+    background: var(--page-accent);
+    color: #fff;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   CALLOUT / NOTICE BOXES
+   ========================================================================== */
+
+/* WordPress Gutenberg Callout (wp:pullquote, wp:quote) */
+.page-entry-content .wp-block-pullquote {
+    border-top: 4px solid var(--page-accent);
+    border-bottom: 4px solid var(--page-accent);
+    padding: 2rem;
+    text-align: center;
+    margin: 2.5rem 0;
+    background: #fff8f5;
+    border-radius: var(--page-radius-sm);
+}
+
+/* Custom notice classes */
+.page-entry-content .notice,
+.page-entry-content .callout {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--page-radius-sm);
+    margin: 2rem 0;
+    border-left: 4px solid;
+    font-size: 0.9375rem;
+}
+
+.page-entry-content .notice-info,
+.page-entry-content .callout-info {
+    background: #eff6ff;
+    border-color: #3b82f6;
+    color: #1e40af;
+}
+
+.page-entry-content .notice-success,
+.page-entry-content .callout-success {
+    background: #f0fdf4;
+    border-color: #22c55e;
+    color: #15803d;
+}
+
+.page-entry-content .notice-warning,
+.page-entry-content .callout-warning {
+    background: #fffbeb;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.page-entry-content .notice-danger,
+.page-entry-content .callout-danger {
+    background: #fef2f2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+/* ==========================================================================
+   GALLERY (WordPress Gallery Block)
+   ========================================================================== */
+
+.page-entry-content .wp-block-gallery {
+    margin: 2rem 0;
+}
+
+.page-entry-content .wp-block-gallery .blocks-gallery-item img {
+    border-radius: var(--page-radius-sm);
+    box-shadow: var(--page-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0;
+}
+
+.page-entry-content .wp-block-gallery .blocks-gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--page-shadow-lg);
+}
+
+/* ==========================================================================
+   COLUMNS (WordPress Columns Block)
+   ========================================================================== */
+
+.page-entry-content .wp-block-columns {
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.page-entry-content .wp-block-column {
+    background: var(--page-bg);
+    border-radius: var(--page-radius-sm);
+    padding: 1.5rem;
+}
+
+/* ==========================================================================
+   ACCORDION / DETAILS (FAQ style)
+   ========================================================================== */
+
+.page-entry-content details {
+    border: 1px solid var(--page-border);
+    border-radius: var(--page-radius-sm);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.page-entry-content details[open] {
+    box-shadow: var(--page-shadow);
+}
+
+.page-entry-content summary {
+    padding: 1.125rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--page-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    background: var(--page-white);
+    transition: background 0.2s, color 0.2s;
+}
+
+.page-entry-content summary::-webkit-details-marker {
+    display: none;
+}
+
+.page-entry-content summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--page-accent);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.page-entry-content details[open] summary {
+    background: #fff8f5;
+    color: var(--page-accent);
+}
+
+.page-entry-content details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.page-entry-content details>*:not(summary) {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--page-border);
+    background: var(--page-white);
+}
+
+/* ==========================================================================
+   SEPARATOR / DIVIDER BLOCK
+   ========================================================================== */
+
+.page-entry-content .wp-block-separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--page-accent), transparent);
+    margin: 3rem auto;
+    border-radius: 2px;
+}
+
+.page-entry-content .wp-block-separator.is-style-dots {
+    background: none;
+    height: auto;
+    text-align: center;
+    color: var(--page-muted);
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+
+/* ==========================================================================
+   MEDIA & TEXT BLOCK
+   ========================================================================== */
+
+.page-entry-content .wp-block-media-text {
+    border-radius: var(--page-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--page-shadow);
+    margin: 2rem 0;
+}
+
+.page-entry-content .wp-block-media-text .wp-block-media-text__media img {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   COVER BLOCK
+   ========================================================================== */
+
+.page-entry-content .wp-block-cover {
+    border-radius: var(--page-radius);
+    overflow: hidden;
+    margin: 2rem 0;
+    min-height: 300px;
+}
+
+/* ==========================================================================
+   EMBED / VIDEO
+   ========================================================================== */
+
+.page-entry-content .wp-block-embed,
+.page-entry-content .wp-block-video {
+    margin: 2rem 0;
+    border-radius: var(--page-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--page-shadow);
+}
+
+.page-entry-content .wp-block-embed iframe,
+.page-entry-content .wp-block-video video {
+    display: block;
+    width: 100%;
+    border-radius: var(--page-radius-sm);
+}
+
+/* ==========================================================================
+   SEARCH BLOCK
+   ========================================================================== */
+
+.page-entry-content .wp-block-search__input {
+    padding: 0.875rem 1.25rem;
+    border: 2px solid var(--page-border);
+    border-radius: 50px 0 0 50px;
+    font-size: 0.9375rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.page-entry-content .wp-block-search__input:focus {
+    border-color: var(--page-accent);
+}
+
+.page-entry-content .wp-block-search__button {
+    padding: 0.875rem 1.5rem;
+    background: var(--page-accent);
+    color: #fff;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.page-entry-content .wp-block-search__button:hover {
+    background: #e55a25;
+}
+
+/* ==========================================================================
+   LATEST POSTS BLOCK
+   ========================================================================== */
+
+.page-entry-content .wp-block-latest-posts {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.page-entry-content .wp-block-latest-posts li {
+    padding: 0;
+}
+
+.page-entry-content .wp-block-latest-posts li::before {
+    display: none;
+}
+
+.page-entry-content .wp-block-latest-posts a {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--page-bg);
+    border-radius: var(--page-radius-sm);
+    text-decoration: none;
+    color: var(--page-dark);
+    font-weight: 600;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.page-entry-content .wp-block-latest-posts a:hover {
+    background: #fff3ee;
+    border-left-color: var(--page-accent);
+    color: var(--page-accent);
+    padding-left: 1.5rem;
+}
+
+/* ==========================================================================
+   PAGE LINKS (multi-page posts)
+   ========================================================================== */
+
+.page-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--page-border);
+}
+
+.page-links-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--page-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-right: 0.5rem;
+}
+
+.page-link-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--page-bg);
+    border: 2px solid var(--page-border);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--page-dark);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.page-link-num:hover,
+.page-links>.post-page-numbers.current {
+    background: var(--page-accent);
+    border-color: var(--page-accent);
+    color: #fff;
+}
+
+/* ==========================================================================
+   PAGE SIDEBAR
+   ========================================================================== */
+
+.page-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.page-sidebar .widget {
+    background: var(--page-white);
+    border-radius: var(--page-radius);
+    padding: 1.75rem;
+    box-shadow: var(--page-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.page-sidebar .widget:last-child {
+    margin-bottom: 0;
+}
+
+.page-sidebar .widget-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--page-dark);
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 2px solid var(--page-border);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.page-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-sidebar ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--page-border);
+}
+
+.page-sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.page-sidebar ul li a {
+    color: var(--page-text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.2s, padding-left 0.2s;
+    display: block;
+}
+
+.page-sidebar ul li a:hover {
+    color: var(--page-accent);
+    padding-left: 0.5rem;
+}
+
+/* ==========================================================================
+   SPECIAL CONTENT COMPONENTS
+   (Custom shortcode-style classes for page builders)
+   ========================================================================== */
+
+/* Feature Box */
+.page-entry-content .feature-box {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.75rem;
+    background: var(--page-bg);
+    border-radius: var(--page-radius-sm);
+    margin: 1.5rem 0;
+    border: 1px solid var(--page-border);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.page-entry-content .feature-box:hover {
+    box-shadow: var(--page-shadow);
+    transform: translateY(-2px);
+}
+
+.page-entry-content .feature-box-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--page-accent), #ff8c5a);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.375rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.page-entry-content .feature-box-content h3 {
+    font-size: 1.0625rem;
+    margin: 0 0 0.5rem;
+}
+
+.page-entry-content .feature-box-content p {
+    font-size: 0.9375rem;
+    color: var(--page-muted);
+    margin: 0;
+}
+
+/* Stats Row */
+.page-entry-content .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.page-entry-content .stat-item {
+    text-align: center;
+    padding: 1.75rem 1rem;
+    background: linear-gradient(135deg, var(--page-dark), #1e3a5f);
+    border-radius: var(--page-radius-sm);
+    color: #fff;
+}
+
+.page-entry-content .stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--page-accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.page-entry-content .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Team Card */
+.page-entry-content .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.page-entry-content .team-card {
+    text-align: center;
+    background: var(--page-white);
+    border-radius: var(--page-radius);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--page-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.page-entry-content .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--page-shadow-lg);
+}
+
+.page-entry-content .team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--page-border);
+    box-shadow: none;
+}
+
+.page-entry-content .team-card h3 {
+    font-size: 1.0625rem;
+    margin: 0 0 0.25rem;
+}
+
+.page-entry-content .team-card p {
+    font-size: 0.875rem;
+    color: var(--page-accent);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Pricing Table */
+.page-entry-content .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.page-entry-content .pricing-card {
+    background: var(--page-white);
+    border-radius: var(--page-radius);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--page-shadow);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.page-entry-content .pricing-card--featured {
+    border-color: var(--page-accent);
+    transform: scale(1.04);
+    box-shadow: var(--page-shadow-lg);
+}
+
+.page-entry-content .pricing-card--featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--page-accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.25rem 1rem;
+    border-radius: 0 0 8px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.page-entry-content .pricing-card:hover {
+    border-color: var(--page-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--page-shadow-lg);
+}
+
+.page-entry-content .pricing-name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--page-muted);
+    margin-bottom: 1rem;
+}
+
+.page-entry-content .pricing-price {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--page-dark);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.page-entry-content .pricing-price sup {
+    font-size: 1.25rem;
+    vertical-align: top;
+    margin-top: 0.5rem;
+}
+
+.page-entry-content .pricing-period {
+    font-size: 0.875rem;
+    color: var(--page-muted);
+    margin-bottom: 1.75rem;
+}
+
+.page-entry-content .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    text-align: left;
+}
+
+.page-entry-content .pricing-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--page-border);
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.page-entry-content .pricing-features li::before {
+    content: '✓';
+    color: #22c55e;
+    font-weight: 900;
+    flex-shrink: 0;
+    background: none;
+    position: static;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+
+/* ==========================================================================
+   PAGE ADVANCED SECTIONS
+   Mirrors the visual treatment of Service sections below page content
+   ========================================================================== */
+
+.page-advanced-sections {
+    margin-top: 2rem;
+}
+
+.page-advanced-sections .service-content-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    margin-bottom: 40px;
+}
+
+.page-advanced-sections .service-content-box:last-child {
+    margin-bottom: 0;
+}
+
+.page-advanced-sections .service-box-title {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: #1e293b;
+    margin: 0 0 30px;
+}
+
+.page-advanced-sections .service-box-title.text-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-advanced-sections .why-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.page-advanced-sections .why-trust-item {
+    display: flex;
+}
+
+.page-advanced-sections .why-trust-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 107, 53, 0.1);
+    border-radius: 50%;
+    color: #ff6b35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.page-advanced-sections .why-trust-item h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px;
+    color: #1e293b;
+}
+
+.page-advanced-sections .why-trust-item p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.page-advanced-sections .how-works-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.page-advanced-sections .how-works-step {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.page-advanced-sections .how-works-number {
+    width: 60px;
+    height: 60px;
+    background: #ff6b35;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.page-advanced-sections .how-works-step h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 10px;
+}
+
+.page-advanced-sections .how-works-step p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.page-advanced-sections .faq-item {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 0;
+}
+
+.page-advanced-sections .faq-item summary {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1e293b;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.page-advanced-sections .faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.page-advanced-sections .faq-item summary i {
+    color: #ff6b35;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.page-advanced-sections .faq-item[open] summary i {
+    transform: rotate(180deg);
+}
+
+.page-advanced-sections .faq-answer {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .page-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-hero-wrap {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .page-hero-wrap--has-image {
+        min-height: 320px;
+    }
+
+    .page-body {
+        padding: 2rem 0 3rem;
+    }
+
+    .page-entry-content {
+        padding: 1.75rem;
+    }
+
+    .page-entry-content h2 {
+        font-size: 1.375rem;
+    }
+
+    .page-entry-content h3 {
+        font-size: 1.125rem;
+    }
+
+    .page-entry-content .alignleft,
+    .page-entry-content .alignright {
+        float: none;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .page-entry-content .alignwide,
+    .page-entry-content .alignfull {
+        margin-left: -1.75rem;
+        margin-right: -1.75rem;
+        max-width: calc(100% + 3.5rem);
+    }
+
+    .page-entry-content .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-entry-content .pricing-card--featured {
+        transform: none;
+    }
+
+    .page-advanced-sections .service-content-box {
+        padding: 1.75rem;
+    }
+
+    .page-advanced-sections .service-box-title {
+        font-size: 1.375rem;
+    }
+
+    .page-advanced-sections .how-works-grid {
+        gap: 20px;
+    }
+}

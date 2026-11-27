@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Floating CTA Button — Wide, Centered, with Dual-Number Popup
+   ========================================================================== */
+
+.floating-cta-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    pointer-events: none;
+}
+
+/* ── Main Button ── */
+.floating-cta-btn {
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    min-height: var(--floating-cta-height, 56px);
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: var(--heading-font, sans-serif);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: filter 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.2;
+}
+
+.floating-cta-btn:hover {
+    filter: brightness(1.08);
+    text-decoration: none;
+}
+
+.floating-cta-btn:active {
+    transform: scaleY(0.97);
+}
+
+.floating-cta-btn .fa-phone-alt {
+    font-size: 1.25rem;
+    animation: ctaRing 2.5s ease-in-out infinite;
+}
+
+@keyframes ctaRing {
+
+    0%,
+    100% {
+        transform: scaleX(-1) rotate(0deg);
+    }
+
+    10% {
+        transform: scaleX(-1) rotate(-15deg);
+    }
+
+    20% {
+        transform: scaleX(-1) rotate(15deg);
+    }
+
+    30% {
+        transform: scaleX(-1) rotate(-10deg);
+    }
+
+    40% {
+        transform: scaleX(-1) rotate(10deg);
+    }
+
+    50% {
+        transform: scaleX(-1) rotate(0deg);
+    }
+}
+
+.cta-chevron {
+    font-size: 0.875rem;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.floating-cta-btn[aria-expanded="true"] .cta-chevron {
+    transform: rotate(180deg);
+}
+
+/* ── Popup Panel ── */
+.floating-cta-popup {
+    pointer-events: all;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.18);
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.25s ease,
+        visibility 0.25s;
+    z-index: 10;
+}
+
+.floating-cta-popup.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.floating-cta-popup-inner {
+    padding: 1.5rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    position: relative;
+    z-index: 2;
+}
+
+.popup-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #718096;
+    margin: 0 0 0.25rem;
+    text-align: center;
+}
+
+/* ── Number Buttons ── */
+.popup-number-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: #f7f8fa;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #1a202c;
+    transition: background 0.2s ease, transform 0.15s ease;
+    border: 2px solid transparent;
+}
+
+.popup-number-btn:hover {
+    background: #fff3ee;
+    border-color: #FF6B35;
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #1a202c;
+}
+
+.popup-number-btn .fa-phone {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF6B35, #ff8c5a);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.popup-area {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.popup-phone {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1a202c;
+    line-height: 1;
+    font-family: var(--heading-font, sans-serif);
+}
+
+/* ── Desktop: limit button width ── */
+@media (min-width: 768px) {
+    .floating-cta-wrap {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 480px;
+    }
+
+    .floating-cta-btn {
+        border-radius: 16px 16px 0 0;
+    }
+
+    .floating-cta-popup {
+        border-radius: 20px 20px 0 0;
+    }
+}

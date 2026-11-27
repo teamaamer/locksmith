@@ -1,0 +1,53 @@
+/* Additions on top of the legacy theme: working forms, service-area map, town links, search results. */
+
+/* Quote forms */
+.lead-form .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.lead-form .err { display: block; min-height: 0; color: #ffb4a0; font-size: .85rem; font-weight: 500; margin-top: .3rem; }
+.lead-form .err:empty { display: none; }
+.lead-form .field.invalid input, .lead-form .field.invalid textarea { border-color: #ff6b35 !important; box-shadow: 0 0 0 3px rgba(255, 107, 53, .25) !important; }
+.cf7-wrapper .lead-form .err, .page-entry-content .lead-form .err { color: #c0392b; }
+.lead-form .consent { margin: .25rem 0 1rem; }
+.lead-form .consent label { display: flex !important; gap: .6rem; align-items: flex-start; font-size: .78rem !important; font-weight: 400 !important; line-height: 1.45; opacity: .85; }
+.lead-form .consent input { width: 16px !important; height: 16px; margin: 2px 0 0 !important; flex: 0 0 16px; accent-color: #FF6B35; }
+.lead-form .consent a { color: inherit; text-decoration: underline; }
+.lead-form .form-status { margin: .75rem 0 0; font-weight: 600; color: #ffb4a0; }
+.cf7-wrapper .lead-form .form-status, .page-entry-content .lead-form .form-status { color: #c0392b; }
+.lead-form .form-status:empty { display: none; }
+.lead-form input[type="submit"][disabled] { opacity: .7; cursor: wait; }
+.form-success { text-align: center; padding: 1rem 0; }
+.form-success > i { font-size: 3rem; color: #FF6B35; margin-bottom: .75rem; }
+.form-success h4 { font-size: 1.5rem; margin-bottom: .5rem; }
+.hero-form .form-success h4, .hero-form .form-success p { color: #fff; }
+.form-success .hero-btn { margin-top: 1rem; display: inline-flex; }
+.hero-form h2.form-title { line-height: 1.2; text-align: center; }
+
+/* Town cards are links */
+a.location-card { text-decoration: none; color: inherit; }
+a.location-card .location-name { color: #fff; }
+.coverage-note { text-align: center; color: rgba(255, 255, 255, .75); margin: 2rem auto 0; max-width: 720px; }
+.coverage-note a { color: #FF6B35; }
+
+/* Service-area map */
+.service-map-section { background: #f8f9fa; }
+.svc-map-card { position: relative; isolation: isolate; z-index: 0; max-width: 1100px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(15, 23, 42, .15); border: 1px solid #e5e7eb; background: #e9eef2; }
+.svc-map { height: 520px; width: 100%; }
+.svc-map-badge { position: absolute; z-index: 500; top: 16px; left: 64px; background: #1f2937; color: #fff; font: 700 .8rem/1 'Poppins', sans-serif; letter-spacing: .06em; text-transform: uppercase; padding: .7rem 1rem; border-radius: 8px; box-shadow: 0 6px 16px rgba(0, 0, 0, .25); pointer-events: none; }
+.svc-map-note { text-align: center; color: #6b7280; margin: 1.25rem auto 0; max-width: 760px; }
+.svc-map-note a { color: #FF6B35; font-weight: 600; }
+.svc-map-fallback { padding: 2rem; text-align: center; }
+.svc-pin { background: #f5a623; border: 3px solid #1f2937; border-radius: 50%; box-shadow: 0 2px 6px rgba(0, 0, 0, .35); }
+.leaflet-tooltip.svc-tip { font: 600 .85rem 'Poppins', sans-serif; }
+@media (max-width: 767px) { .svc-map { height: 400px; } .svc-map-badge { left: 56px; font-size: .68rem; } }
+
+/* Footer bottom links */
+.footer-bottom-right a { color: #a0aec0; text-decoration: none; font-size: .9rem; }
+.footer-bottom-right a:hover { color: #FF6B35; }
+@media (max-width: 767px) { .footer-bottom-right { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: .5rem 1rem !important; } }
+
+/* Search modal results */
+.search-results { list-style: none; margin: 1.5rem auto 0; padding: 0; max-width: 640px; max-height: 50vh; overflow: auto; }
+.search-results li a { display: block; padding: .85rem 1rem; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .12); text-decoration: none; font-size: 1.1rem; }
+.search-results li a:hover, .search-results li a:focus { background: rgba(255, 107, 53, .2); color: #fff; }
+
+/* Leave room for the floating call bar */
+.site-footer .footer-bottom { padding-bottom: 110px !important; }

@@ -5,3 +5,4 @@ tools
 data
 server.mjs
 .env.example
+css/legacy

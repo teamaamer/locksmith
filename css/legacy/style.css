@@ -1,0 +1,29 @@
+/*
+Theme Name: Service Locksmith
+Theme URI: https://yousefalhayek.com/themes/service-locksmith
+Author: Yousef T Alhayek
+Author URI: https://yousefalhayek.com
+Description: A modern, fast, and fully customizable WordPress theme for locksmith and service businesses. Features Contact Form 7 integration, comprehensive Customizer options, custom icons support, SEO optimization, and blazing-fast performance. Perfect for professional service providers.
+Version: 1.1.6
+Requires at least: 6.0
+Tested up to: 6.9.4
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: service-locksmith
+Domain Path: /languages
+Tags: custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, business, portfolio, one-column, two-columns, left-sidebar, right-sidebar, custom-colors, custom-background, rtl-language-support
+
+Service Locksmith WordPress Theme, (C) 2026 Yousef T Alhayek
+Service Locksmith is distributed under the terms of the GNU GPL.
+*/
+
+/**
+ * Do not place theme CSS in this file.
+ * Runtime styles are loaded from assets/css/ through functions.php.
+ *
+ * For customization, use:
+ * 1. The WordPress Customizer
+ * 2. A child theme
+ * 3. Additional CSS
+ */

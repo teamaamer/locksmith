@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Service Coverage Section (Dual-State)
+   ========================================================================== */
+
+.service-coverage-section {
+    background-color: #1a202c;
+    /* Theme dark background color matching the attached screenshot */
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+.service-coverage-section .title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.service-coverage-section .subtitle {
+    color: #FF6B35;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Two equal columns for State 1 and State 2 on Desktop */
+.coverage-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.coverage-grid.states-count-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.coverage-grid.states-count-1 {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coverage-state-block {
+    background: transparent;
+}
+
+.coverage-state-block .state-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #f8f9fa;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+/* Grid for the locations inside each state */
+.locations-grid {
+    display: grid;
+    /* 3 columns on desktop inside each half, or flexible */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* Location Card / Button Style */
+.location-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Debounce */
+    transition: transform 0.3s ease 0.1s, box-shadow 0.3s ease 0.1s;
+}
+
+a.location-card:hover {
+    transition: transform 0.3s ease 0s, box-shadow 0.3s ease 0s;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 107, 53, 0.3);
+    text-decoration: none;
+}
+
+.location-name {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.location-badge {
+    background-color: rgba(39, 174, 96, 0.2);
+    color: #2ecc71;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.location-badge i {
+    font-size: 8px;
+}
+
+/* Responsive Rules */
+@media (max-width: 991px) {
+
+    /* Stack the states on tablet/mobile */
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Critical user request: 3 items per row on mobile */
+    .locations-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px;
+    }
+
+    .location-card {
+        padding: 15px 10px;
+    }
+
+    .location-name {
+        font-size: 0.9rem;
+    }
+
+    .location-badge {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+        flex-direction: column;
+        text-align: center;
+        gap: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Adjust for very small screens if necessary, though 3 per row is tight */
+    .location-badge {
+        font-size: 0.6rem;
+    }
+
+    .location-name {
+        font-size: 0.8rem;
+    }
+}
