@@ -97,7 +97,11 @@ function header(cur, { lp = false } = {}) {
     .replace(/<a href="mailto:[^"]*" class="email-link">[^<]*<\/a>/, `<a href="mailto:${biz.email}" class="email-link">${biz.email}</a>`)
     .replace(/<a href="tel:\+14134331135" class="phone-link">/g, `<a href="tel:${TEL}" class="phone-link" data-track="phone_click" data-cta="topbar">`)
     .replace(/<a href="tel:\+14134331135" class="btn btn-primary">/, `<a href="tel:${TEL}" class="btn btn-primary" data-track="phone_click" data-cta="header">`);
-  h = h.replace('<a href="/">Home</a>', '<a href="/">Home</a>');
+  const areasMenu = `<li class="menu-item menu-item-has-children menu-item-areas"><a href="/areas/">Service Areas</a><ul class="sub-menu">${MA.map((l) => `<li class="menu-item"><a href="${cityUrl(l)}">${esc(l.city)}, MA</a></li>`).join("")}<li class="menu-item"><a href="/areas/connecticut/">Connecticut</a></li></ul></li>`;
+  h = h.replace(/<\/ul>(\s*<\/div>\s*<\/nav>)/, `${areasMenu}</ul>$1`)
+    .replace(/(class="btn btn-primary" data-track="phone_click" data-cta="header">)\s*Contact Us\s*/, `$1<i class="fas fa-phone-alt" aria-hidden="true"></i> <span>${PHONE}</span>`);
+  if (cur === "areas") h = h.replace('menu-item-areas"', 'menu-item-areas current-menu-item"');
+  if (cur === "contact") h = h.replace('menu-item-contact"', 'menu-item-contact current-menu-item"');
   if (cur && NAV[cur]) {
     const href = NAV[cur];
     h = h.replace(new RegExp(`(<li id="menu-item-\\d+" class="[^"]*)("><a href="${href.replace(/\//g, "\\/")}")`), `$1 current-menu-item$2 aria-current="page"`);
@@ -115,14 +119,22 @@ function header(cur, { lp = false } = {}) {
     <ul class="search-results" id="searchResults"></ul>
   </div>
 </div>
-${fix(chrome.floating).replace('href="tel:+14134331135" class="floating-cta-btn"', `href="tel:${TEL}" class="floating-cta-btn" data-track="phone_click" data-cta="floating-bar"`)}`;
+<div class="floating-cta-wrap floating-cta-split" id="floatingCta">
+  <a href="tel:${TEL}" class="floating-cta-btn" style="background:#FF6B35;color:#ffffff;" aria-label="Call Us Now" data-track="phone_click" data-cta="floating-bar"><i class="fas fa-phone-alt" aria-hidden="true"></i><span>Call Now<span class="fc-long"> - 24/7</span></span></a>
+  <a href="/contact/" class="floating-cta-btn floating-cta-quote" data-quote data-track="quote_cta" data-cta="floating-bar"><i class="fas fa-file-signature" aria-hidden="true"></i><span>Free Quote</span></a>
+</div>`;
 }
+const FOOT_SERVICES = [["/services/lockout-service/", "Lockout Service"], ["/services/residential-locksmith/", "Residential Locksmith"], ["/services/commercial-locksmith/", "Commercial Locksmith"], ["/services/automotive-locksmith/", "Automotive Locksmith"], ["/services/car-key-programming/", "Car Key Programming"], ["/services/lock-rekey-service/", "Lock Rekey Service"], ["/services/lock-change-service/", "Lock Change Service"], ["/services/safe-locksmith/", "Safe Locksmith"]];
 function footer({ lp = false } = {}) {
   const qb = fix(chrome.quickbar).replace(/<a href="mailto:[^"]*" class="email-link">[^<]*<\/a>/, `<a href="mailto:${biz.email}" class="email-link">${biz.email}</a>`);
   const ft = fix(chrome.footer)
     .replace(/<a href="mailto:[^"]*" class="email-link">[^<]*<\/a>/, `<a href="mailto:${biz.email}" class="email-link">${biz.email}</a>`)
     .replace(/ aria-current="page"/g, "")
     .replace(/&copy; \d{4}/, `&copy; ${new Date().getFullYear()}`)
+    .replace(/footer-cols-2/, lp ? "footer-cols-2" : "footer-cols-4").replace(/footer-grid footer-grid-2/, lp ? "footer-grid footer-grid-2" : "footer-grid footer-grid-4")
+    .replace(/(<div class="footer-col footer-col-contact">)/, lp ? "$1" : `<div class="footer-col footer-col-links"><h3 class="footer-widget-title"><span>Our Services</span></h3><ul class="footer-links">${FOOT_SERVICES.map(([u, n]) => `<li><a href="${u}">${n}</a></li>`).join("")}<li><a href="/services/">All services &rarr;</a></li></ul></div>
+<div class="footer-col footer-col-links"><h3 class="footer-widget-title"><span>Service Areas</span></h3><ul class="footer-links">${MA.slice(0, 8).map((l) => `<li><a href="${cityUrl(l)}">${esc(l.city)}, MA</a></li>`).join("")}<li><a href="/areas/">All service areas &rarr;</a></li></ul></div>
+$1`)
     .replace(/<div class="footer-bottom-right">\s*<\/div>/, `<div class="footer-bottom-right"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a>${lp ? "" : '<a href="/areas/">Areas We Serve</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a>'}</div>`);
   return (lp ? "" : qb) + ft;
 }
@@ -174,11 +186,17 @@ const STATS_SEC = sec("s-stats-section").replace(/<span class="s-stat-counter" d
 const TESTI_SEC = sec("testimonials-section");
 const LEGACY_FAQS = [...HOME.matchAll(/<span>([^<]+)<\/span>\s*<i class="fas fa-chevron-down"[^>]*><\/i>\s*<\/button>\s*<div class="faq-answer" hidden>\s*<p>([\s\S]*?)<\/p>/g)].map((m) => ({ q: m[1].trim(), a: m[2].trim() }));
 
+const EMERGENCY = `<section class="emergency-band"><div class="container emergency-inner">
+  <div class="emergency-icon"><i class="fas fa-key" aria-hidden="true"></i></div>
+  <div class="emergency-text"><span class="emergency-kicker">24/7 Emergency Locksmith</span><h2>Locked out right now? We&rsquo;re on our way.</h2><p>Home, car or business &mdash; call and a technician will get you back inside fast, any hour of the day or night.</p></div>
+  <div class="emergency-actions"><a href="tel:${TEL}" class="emergency-call" data-track="phone_click" data-cta="emergency-band"><i class="fas fa-phone-alt" aria-hidden="true"></i><span><small>Tap to call 24/7</small>${PHONE}</span></a><a href="/contact/" class="emergency-quote" data-quote data-track="quote_cta" data-cta="emergency-band">Get a Free Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+</div></section>`;
 function heroSection({ h1, sub, features = ["24/7 Availability", "Licensed &amp; Certified", "Fast Response"], form, formTitle = "Get a Free Quote" }) {
   return `<section class="hero-section" style="background-image: url(/assets/legacy/2026/03/hero-Locksmith-Express-MK-1920x800.webp);">
   <div class="hero-overlay" style="background: rgba(44, 62, 80, 0.85);"></div>
   <div class="container"><div class="hero-content">
     <div class="hero-text">
+      <span class="hero-live"><span class="hero-live-dot" aria-hidden="true"></span>Technicians available 24/7 &middot; Springfield &amp; Western MA</span>
       <h1 class="hero-title">${h1}</h1>
       <p class="hero-subtitle">${sub}</p>
       <ul class="hero-features">${features.map((f) => `<li class="hero-feature"><i class="fas fa-check-circle" aria-hidden="true"></i><span>${f}</span></li>`).join("")}</ul>
@@ -230,6 +248,9 @@ function home() {
     .replace(/<div class="wpcf7 no-js"[\s\S]*?<\/form>\s*<\/div>/, cf7Form({ source: "/", name: "Homepage Quote" }))
     .replace(/<h3 class="form-title">/, '<h2 class="form-title">').replace(/(Get a Free Quote\s*)<\/h3>/, "$1</h2>")
     .replace(/<section class="blog-section[\s\S]*?<\/section>/, "")
+    .replace(/(<div class="hero-text">)/, `$1\n${'<span class="hero-live"><span class="hero-live-dot" aria-hidden="true"></span>Technicians available 24/7 &middot; Springfield &amp; Western MA</span>'}`)
+    .replace(/<span>Get Free Quote<\/span>/, `<span>Call ${PHONE}</span>`)
+    .replace(/<section class="testimonials-section">/, `${EMERGENCY}<section class="testimonials-section">`)
     .replace(/<section class="s-stats-section[\s\S]*?<\/section>/, STATS_SEC)
     .replace(/<a href="tel:\+14134331135" class="hero-btn hero-btn-primary">/, `<a href="tel:${TEL}" class="hero-btn hero-btn-primary" data-track="phone_click" data-cta="hero">`)
     .replace(/<a href="tel:\+14134331135" class="about-btn">/, `<a href="tel:${TEL}" class="about-btn" data-track="phone_click" data-cta="about">`);
@@ -270,8 +291,8 @@ function servicePages() {
 /* ================= AREAS ================= */
 function areas() {
   const crumbs = [{ name: "Home", href: "/" }, { name: "Areas We Serve", href: "/areas/" }];
-  const body = `<main id="primary" class="site-main homepage" role="main">${pageHero("Areas We Serve", crumbs)}${coverageSection(MA, { extra: `<p class="coverage-note">Connecticut: we also provide mobile service in parts of Connecticut near our Massachusetts base. <a href="/areas/connecticut/">See Connecticut coverage</a>.</p>` })}${mapSection()}${WHY_SEC}</main>`;
-  emit("/areas/", head({ title: "Areas We Serve | Springfield & Western Massachusetts Locksmith | Locksmith Express MK", desc: "Locksmith Express MK mobile locksmith service areas: Springfield, Chicopee, Holyoke, Westfield, West Springfield, Agawam and more in Western Massachusetts, plus Connecticut.", url: "/areas/", jsonld: [crumbsLd(crumbs)] }) + page({ body, bodyClass: "page" }), { title: "Areas We Serve" });
+  const body = `<main id="primary" class="site-main homepage" role="main">${pageHero("Areas We Serve", crumbs)}${coverageSection(MA, { extra: `<p class="coverage-note">Connecticut: we also provide mobile service in parts of Connecticut near our Massachusetts base. <a href="/areas/connecticut/">See Connecticut coverage</a>.</p>` })}${mapSection()}${WHY_SEC}${EMERGENCY}</main>`;
+  emit("/areas/", head({ title: "Areas We Serve | Springfield & Western Massachusetts Locksmith | Locksmith Express MK", desc: "Locksmith Express MK mobile locksmith service areas: Springfield, Chicopee, Holyoke, Westfield, West Springfield, Agawam and more in Western Massachusetts, plus Connecticut.", url: "/areas/", jsonld: [crumbsLd(crumbs)] }) + page({ cur: "areas", body, bodyClass: "page" }), { title: "Areas We Serve" });
 
   // Massachusetts
   let c = [{ name: "Home", href: "/" }, { name: "Areas We Serve", href: "/areas/" }, { name: "Massachusetts", href: "/areas/massachusetts/" }];
@@ -308,11 +329,11 @@ function cityPage(l) {
 ${heroSection({ h1: `Locksmith in ${l.city}, MA &mdash; We&rsquo;ve Got You Covered!`, sub: `Locked out? Need a key replacement? Locksmith Express MK provides 24/7 mobile locksmith help for homes, businesses and vehicles in ${esc(l.city)}, Massachusetts.`, form: cf7Form({ city: l.city, state: "MA", source: url, name: `${l.city} Quote` }) })}
 ${SERVICES_SEC.replace(/<h2 class="section-title">[\s\S]*?<\/h2>/, `<h2 class="section-title">Locksmith Services in ${esc(l.city)}, MA</h2>`)}
 ${local}
-${WHY_SEC}${HOW_SEC}
+${WHY_SEC}${EMERGENCY}${HOW_SEC}
 ${faqSection(faqs, { title: `${esc(l.city)} Locksmith FAQ` })}
 ${near.length ? coverageSection(near, { sub: "Nearby Areas", title: `Also Serving Near ${esc(l.city)}` }).replace(' id="coverage"', "") : ""}
 </main>`;
-  emit(url, head({ title: l.seoTitle, desc: l.metaDescription, url, jsonld: [crumbsLd(crumbs), faqLd(faqs), { "@context": "https://schema.org", "@type": "Service", name: `Locksmith services in ${l.city}, MA`, provider: { "@id": biz.url + "/#business" }, areaServed: { "@type": "City", name: `${l.city}, MA` } }] }) + page({ body, bodyClass: "page" }), { title: `${l.city}, MA` });
+  emit(url, head({ title: l.seoTitle, desc: l.metaDescription, url, jsonld: [crumbsLd(crumbs), faqLd(faqs), { "@context": "https://schema.org", "@type": "Service", name: `Locksmith services in ${l.city}, MA`, provider: { "@id": biz.url + "/#business" }, areaServed: { "@type": "City", name: `${l.city}, MA` } }] }) + page({ cur: "areas", body, bodyClass: "page" }), { title: `${l.city}, MA` });
 }
 
 /* ================= AD LANDING PAGES ================= */
@@ -339,12 +360,12 @@ function infoPages() {
   <div class="about-cta"><a href="tel:${TEL}" class="about-btn" data-track="phone_click" data-cta="about-page"><i class="fas fa-phone-alt" aria-hidden="true"></i><span>Contact Us Now</span></a></div></div></div></div></section>`;
   const aboutWhy = `<section class="why-section section-padding" id="why-choose-us"><div class="why-overlay"></div><div class="container">${sectionHeader("EXPERIENCED LOCKSMITHS YOU CAN RELY ON", "Expert Locksmith Solutions, Whenever You Need", "Locksmith Express MK is committed to superior locksmith services for homes, businesses and vehicles.")}
   <div class="why-grid">${[["verified", "Trustworthy Experts", "Our team brings years of knowledge and expertise to each job, so you receive the ideal solution."], ["license", "Advanced Technology", "We use the latest technology and tools to deliver efficient, accurate and quick solutions."], ["24fps_select", "Always Available", "With 24/7 availability, our locksmiths are ready to help you anytime you need us."], ["call", "Customized Solutions", "We assess your locks and security requirements to suggest the best solution for you."]].map(([i, t, d]) => `<div class="why-card"><div class="why-icon"><img src="/assets/legacy/2026/03/${i}_60dp_FFFFFF_FILL0_wght400_GRAD0_opsz48${i === "license" ? "-1" : ""}.png" width="60" height="60" class="why-icon-image" alt="" loading="lazy" decoding="async"></div><h3 class="why-title">${t}</h3><p class="why-desc">${d}</p></div>`).join("")}</div></div></section>`;
-  emit("/about/", head({ title: "About Locksmith Express MK | 24/7 Locksmith in Springfield, MA", desc: "Locksmith Express MK offers a comprehensive range of 24/7 residential, commercial and automotive locksmith services across Springfield and Western Massachusetts.", url: "/about/", jsonld: [crumbsLd(crumbs)] }) + page({ body: `<main id="primary" class="site-main homepage static-page" role="main">${pageHero("About", crumbs)}${aboutIntro}${SERVICES_SEC}${aboutWhy}${STATS_SEC}${TESTI_SEC}</main>`, bodyClass: "page" }), { title: "About" });
+  emit("/about/", head({ title: "About Locksmith Express MK | 24/7 Locksmith in Springfield, MA", desc: "Locksmith Express MK offers a comprehensive range of 24/7 residential, commercial and automotive locksmith services across Springfield and Western Massachusetts.", url: "/about/", jsonld: [crumbsLd(crumbs)] }) + page({ body: `<main id="primary" class="site-main homepage static-page" role="main">${pageHero("About", crumbs)}${aboutIntro}${SERVICES_SEC}${aboutWhy}${STATS_SEC}${EMERGENCY}${TESTI_SEC}</main>`, bodyClass: "page" }), { title: "About" });
 
   // Contact — legacy page with working form
   crumbs = [{ name: "Home", href: "/" }, { name: "Contact", href: "/contact/" }];
   const C = swapForms(fix(LEG("contact").main), { source: "/contact/", name: "Contact Page" });
-  emit("/contact/", head({ title: "Contact Locksmith Express MK | Call (413) 433-1135", desc: "Contact Locksmith Express MK for 24/7 mobile locksmith service in Springfield and Western Massachusetts. Call (413) 433-1135 or request a quote online.", url: "/contact/", jsonld: [crumbsLd(crumbs)] }) + page({ body: C, bodyClass: "page" }), { title: "Contact" });
+  emit("/contact/", head({ title: "Contact Locksmith Express MK | Call (413) 433-1135", desc: "Contact Locksmith Express MK for 24/7 mobile locksmith service in Springfield and Western Massachusetts. Call (413) 433-1135 or request a quote online.", url: "/contact/", jsonld: [crumbsLd(crumbs)] }) + page({ cur: "contact", body: C, bodyClass: "page" }), { title: "Contact" });
 
   // FAQ
   crumbs = [{ name: "Home", href: "/" }, { name: "FAQ", href: "/faq/" }];

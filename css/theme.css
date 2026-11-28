@@ -11698,3 +11698,66 @@ a.location-card .location-name { color: #fff; }
 
 /* Leave room for the floating call bar */
 .site-footer .footer-bottom { padding-bottom: 110px !important; }
+
+/* ===================== Polish layer ===================== */
+/* Header: sticky shadow + phone CTA */
+.main-header { transition: box-shadow .3s ease; }
+.main-header.scrolled { box-shadow: 0 8px 30px rgba(15, 23, 42, .12); }
+.header-cta .btn-primary { display: inline-flex; align-items: center; gap: .55rem; white-space: nowrap; font-weight: 700; letter-spacing: .01em; box-shadow: 0 8px 20px rgba(255, 107, 53, .35); transition: transform .2s ease, box-shadow .2s ease; }
+.header-cta .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(255, 107, 53, .45); }
+.header-cta .btn-primary i { animation: ring 2.4s ease-in-out infinite; transform-origin: 50% 60%; }
+@keyframes ring { 0%, 70%, 100% { transform: rotate(0) } 75% { transform: rotate(-14deg) } 80% { transform: rotate(12deg) } 85% { transform: rotate(-8deg) } 90% { transform: rotate(6deg) } }
+.primary-menu .sub-menu { max-height: 70vh; overflow: auto; min-width: 230px; }
+.primary-menu > li > a { white-space: nowrap; }
+@media (min-width: 1025px) { .primary-menu > li > a { padding-left: .6rem !important; padding-right: .6rem !important; font-size: .9rem !important; } .primary-menu { gap: 0 !important; } .header-cta .btn-primary { padding-left: 1rem !important; padding-right: 1rem !important; } }
+
+/* Hero live badge */
+.hero-live { display: inline-flex; align-items: center; gap: .6rem; padding: .5rem 1rem; margin-bottom: 1.25rem; border-radius: 999px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .2); color: #fff; font: 600 .88rem/1.2 'Poppins', sans-serif; backdrop-filter: blur(6px); }
+.hero-live-dot { width: 10px; height: 10px; border-radius: 50%; background: #22c55e; animation: pulse 1.8s infinite; flex: 0 0 10px; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, .65) } 70% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0) } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0) } }
+
+/* Service cards: smoother zoom + "view service" hint */
+.services-section .service-card { overflow: hidden; }
+.services-section .service-card .service-card-bg { transition: transform .8s cubic-bezier(.2, .7, .2, 1) !important; }
+.services-section .service-card:hover .service-card-bg { transform: scale(1.08); }
+.services-section .service-content::after { content: "View service \2192"; display: inline-block; margin-top: .9rem; font: 600 .85rem 'Poppins', sans-serif; color: #FF6B35; letter-spacing: .03em; opacity: 0; transform: translateY(8px); transition: all .35s ease; }
+.services-section .service-card:hover .service-content::after { opacity: 1; transform: none; }
+
+/* Emergency band */
+.emergency-band { position: relative; overflow: hidden; padding: 3.5rem 0; background: linear-gradient(120deg, #FF6B35 0%, #e8551f 55%, #c2410c 100%); color: #fff; }
+.emergency-inner { position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 2rem; align-items: center; }
+.emergency-icon { width: 84px; height: 84px; border-radius: 22px; background: rgba(255, 255, 255, .16); display: grid; place-items: center; font-size: 2.2rem; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25); }
+.emergency-kicker { display: inline-block; font: 700 .78rem 'Poppins', sans-serif; letter-spacing: .14em; text-transform: uppercase; opacity: .9; margin-bottom: .35rem; }
+.emergency-text h2 { color: #fff; font-size: clamp(1.6rem, 2.6vw, 2.3rem); margin: 0 0 .4rem; line-height: 1.2; }
+.emergency-text p { margin: 0; opacity: .92; max-width: 560px; }
+.emergency-actions { display: flex; flex-direction: column; gap: .75rem; align-items: stretch; }
+.emergency-call { display: flex; align-items: center; gap: .9rem; background: #1a1f2e; color: #fff !important; text-decoration: none; padding: .9rem 1.6rem; border-radius: 14px; font: 700 1.35rem 'Poppins', sans-serif; box-shadow: 0 14px 30px rgba(0, 0, 0, .25); transition: transform .2s ease; }
+.emergency-call small { display: block; font: 500 .72rem 'Roboto', sans-serif; opacity: .75; letter-spacing: .06em; text-transform: uppercase; }
+.emergency-call i { font-size: 1.3rem; color: #FF6B35; }
+.emergency-call:hover { transform: translateY(-2px); }
+.emergency-quote { text-align: center; color: #fff !important; font-weight: 600; text-decoration: none; padding: .55rem 1rem; border: 1px solid rgba(255, 255, 255, .5); border-radius: 12px; transition: background .2s; }
+.emergency-quote:hover { background: rgba(255, 255, 255, .12); }
+@media (max-width: 900px) { .emergency-inner { grid-template-columns: 1fr; text-align: center; gap: 1.25rem; } .emergency-icon { margin: 0 auto; } .emergency-text p { margin: 0 auto; } }
+
+/* Footer link columns */
+.footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.footer-links a { color: var(--footer-link, #cbd5e0); text-decoration: none; transition: color .2s, padding .2s; }
+.footer-links a:hover { color: #FF6B35; padding-left: 4px; }
+
+/* Floating bar: Call + Quote */
+.floating-cta-split { flex-direction: row !important; }
+.floating-cta-split .floating-cta-btn { flex: 1 1 0; width: auto; min-height: 64px; }
+.floating-cta-split .floating-cta-quote { background: #2C3E50; color: #fff; flex: 0 0 40%; }
+.floating-cta-split .floating-cta-quote:hover { background: #1a1f2e; color: #fff; }
+@media (min-width: 768px) { .floating-cta-split { width: 520px !important; } .floating-cta-split .floating-cta-btn:first-child { border-radius: 16px 0 0 0; } .floating-cta-split .floating-cta-quote { border-radius: 0 16px 0 0; } }
+@media (max-width: 767px) { .floating-cta-split .floating-cta-btn { font-size: 1rem; padding: .8rem; } .fc-long { display: none; } }
+
+/* Scroll reveal (only when JS is running; content is never hidden without it) */
+.js-reveal .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); }
+.js-reveal .rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js-reveal .rv { opacity: 1; transform: none; transition: none; } .hero-live-dot, .header-cta .btn-primary i { animation: none; } }
+
+/* header fit */
+.site-branding { flex-shrink: 0; }
+.site-branding .custom-logo { width: auto; max-height: 64px; min-width: 190px; object-fit: contain; }
+.primary-menu > .menu-item-has-children > a { display: inline-flex; flex-direction: row-reverse; align-items: center; gap: .35rem; }

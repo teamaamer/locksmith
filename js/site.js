@@ -193,6 +193,17 @@
         .then(function () { sending = false; btn.disabled = false; btn.value = label; });
     });
   });
+  // Scroll reveal for cards and section headers (only elements below the fold)
+  if (!reduce && "IntersectionObserver" in window) {
+    var sel = ".section-header, .service-card, .location-card, .about-image-wrapper, .about-text-wrapper, .why-card, .how-step-item, .how-image-side, .s-stat-card, .testimonial-card, .faq-item, .emergency-inner, .svc-map-card, .service-content-box";
+    var items = $$(sel).filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight; });
+    document.documentElement.classList.add("js-reveal");
+    items.forEach(function (el, i) { el.classList.add("rv"); el.style.transitionDelay = (i % 4) * 70 + "ms"; });
+    var ro = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); ro.unobserve(en.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    items.forEach(function (el) { ro.observe(el); });
+  }
+  // Quote buttons: scroll to the form on this page, otherwise go to /contact/
+  $$("[data-quote]").forEach(function (a) { a.addEventListener("click", function (e) { var f = $(".lead-form input:not([type=hidden]):not(.hp)"); if (f) { e.preventDefault(); f.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); setTimeout(function () { f.focus({ preventScroll: true }); }, 400); } }); });
   // "Request Assistance" / quote links scroll to the nearest form
   $$('a[href="#quote"]').forEach(function (a) { a.addEventListener("click", function (e) { var f = $(".lead-form input"); if (f) { e.preventDefault(); f.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); f.focus({ preventScroll: true }); } }); });
 })();

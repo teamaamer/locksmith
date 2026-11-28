@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   try {
     if (process.env.RESEND_API_KEY && process.env.EMAIL_FROM) {
       const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: process.env.EMAIL_FROM, to: [to], subject: `New quote request: ${d.service}${d.city ? " — " + d.city : ""}`, html, text, reply_to: d.email || undefined }) });
-      if (!r.ok) { const j = await r.json().catch(() => ({})); const err = new Error(`email ${r.status} ${j.name || ""}: ${j.message || ""}`); err.detail = j.name || `status_${r.status}`; throw err; }
+      if (!r.ok) { const j = await r.json().catch(() => ({})); const err = new Error(`email ${r.status} ${j.name || ""}: ${j.message || ""}`); err.detail = `${r.status} ${j.name || ""}`.trim(); throw err; }
       delivered = true;
     }
     if (process.env.GHL_WEBHOOK_URL) {
